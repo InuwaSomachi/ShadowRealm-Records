@@ -4,85 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #7cfc00;
+            --text: #ffffff;
+            --neon: #39ff14;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--neon);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, var(--neon), #00ff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--neon);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: var(--neon);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-button:hover {
+            background: var(--neon);
+            color: var(--primary);
+            box-shadow: 0 0 20px var(--neon);
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--neon);
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .artist-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.3s;
+        }
+
+        .artist-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .artist-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .newsletter {
+            background: #0a0a0a;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .newsletter-input {
+            padding: 1rem;
+            width: 300px;
+            background: transparent;
+            border: 1px solid var(--neon);
+            color: white;
+            margin-right: 1rem;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--neon);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--neon);
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <img src="images/logo.png" alt="ShadowRealm Records" class="main-logo">
-        <nav class="main-nav">
-            <a href="#artists" class="nav-link active">Shadows</a>
-            <a href="#newsletter" class="nav-link">Chronicles</a>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">ShadowRealm</div>
+            <div class="nav-links">
+                <a href="#artists">Artists</a>
+                <a href="#releases">Releases</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
-    <section class="shadow-select" id="artists">
-        <div class="section-header">
-            <h2>▣ CHOOSE YOUR SHADOW ▣</h2>
-            <div class="header-underline"></div>
-        </div>
-        
-        <div class="character-grid">
-            <!-- Junebu99 Card -->
-            <a href="artists/junebu99.html" class="character-card street-theme">
-                <div class="character-preview" 
-                     style="background-image: url('images/artists/junebu99/header.jpg')">
-                    <div class="character-overlay">
-                        <h3>JUNEBU99</h3>
-                        <p>The Ghetto Author</p>
-                    </div>
-                </div>
-                <div class="character-stats">
-                    <span class="stat-tag">Lyrical Alchemist</span>
-                    <span class="stat-tag">90s Revivalist</span>
-                </div>
-            </a>
-
-            <!-- Medi Tha Great Card -->
-            <a href="artists/medi_tha_great.html" class="character-card hustle-theme">
-                <div class="character-preview" 
-                     style="background-image: url('images/artists/medi_tha_great/header.jpg')">
-                    <div class="character-overlay">
-                        <h3>MEDI THA GREAT</h3>
-                        <p>The Lavish Hustler</p>
-                    </div>
-                </div>
-                <div class="character-stats">
-                    <span class="stat-tag">Wealth Architect</span>
-                    <span class="stat-tag">Trap Visionary</span>
-                </div>
-            </a>
-
-            <!-- pkltheshaboy Card -->
-            <a href="artists/pkltheshaboy.html" class="character-card enigma-theme">
-                <div class="character-preview" 
-                     style="background-image: url('images/artists/pkltheshaboy/header.jpg')">
-                    <div class="character-overlay">
-                        <h3>pkltheshaboy</h3>
-                        <p>The Digital Phantom</p>
-                    </div>
-                </div>
-                <div class="character-stats">
-                    <span class="stat-tag">Genre Shapeshifter</span>
-                    <span class="stat-tag">Visual Cryptid</span>
-                </div>
-            </a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Where Shadows Meet Sound</h1>
+            <p>Unearth the underground</p>
+            <button class="cta-button">Explore Artists</button>
         </div>
     </section>
 
-    <section class="shadow-newsletter" id="newsletter">
-        <div class="newsletter-container">
-            <h3>Join the Shadow Network</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your dark email..." required>
-                <button type="submit">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </form>
+    <section class="section" id="artists">
+        <h2>Featured Artists</h2>
+        <div class="artist-grid">
+            <!-- Repeat for each artist -->
+            <div class="artist-card">
+                <img src="artist-image.jpg" alt="Artist Name">
+                <div class="artist-info">
+                    <h3>Artist Name</h3>
+                    <p>Genre</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="js/newsletter.js"></script>
+    <section class="newsletter">
+        <h2>Join the Shadow Collective</h2>
+        <input type="email" class="newsletter-input" placeholder="Enter your email">
+        <button class="cta-button">Subscribe</button>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-spotify"></i></a>
+            <a href="#"><i class="fab fa-soundcloud"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2023 ShadowRealm Records</p>
+    </footer>
 </body>
 </html>
