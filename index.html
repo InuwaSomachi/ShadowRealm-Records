@@ -6,24 +6,44 @@
     <title>ShadowRealm Records</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="shadow-header">
-        <h1><span class="gradient-text">ShadowRealm</span> Records</h1>
-        <nav>
-            <ul>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="staff.html">Staff</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-            </ul>
-        </nav>
+<body class="home">
+    <header>
+        <img src="images/logo.png" alt="ShadowRealm Records" class="logo">
     </header>
     
-    <section id="artists" class="grid-container">
-        <!-- Artist cards linking to individual pages -->
+    <section class="fighter-select">
+        <h2>Choose Your Artist</h2>
+        <div class="fighter-grid">
+            <a href="artists/junebu99.html" class="fighter-card junebu99">
+                <h3>Junebu99</h3>
+                <p>Soulful R&B Lyricist</p>
+            </a>
+            <a href="artists/medithagreat.html" class="fighter-card medithagreat">
+                <h3>Medi Tha Great</h3>
+                <p>Lavish Hustler</p>
+            </a>
+            <a href="artists/pkltheshaboy.html" class="fighter-card pkltheshaboy">
+                <h3>PKLtheshaboy</h3>
+                <p>Mysterious Creator</p>
+            </a>
+        </div>
     </section>
 
-    <section id="newsletter" class="shadow-section">
-        <!-- Newsletter form -->
+    <section class="newsletter">
+        <h2>Shadow Updates</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Enter your dark essence..." required>
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
+
+    <section class="staff">
+        <h2>Shadow Keepers</h2>
+        <div class="staff-grid">
+            <!-- Add staff members here -->
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
