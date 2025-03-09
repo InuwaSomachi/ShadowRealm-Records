@@ -1,62 +1,39 @@
 :root {
     --shadow-primary: #1a1a1a;
-    --shadow-accent: #8b0000;
-    --dark-text: #e0e0e0;
+    --shadow-accent: #4a0000;
+    --neon-green: #00ff9d;
+    --text-primary: #e0e0e0;
 }
 
 body {
-    background: var(--shadow-primary);
-    color: var(--dark-text);
-    font-family: 'Courier New', monospace;
+    background-color: var(--shadow-primary);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
 }
 
-.logo {
-    width: 300px;
-    margin: 2rem auto;
-    display: block;
+.fighter-select {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 3px solid var(--neon-green);
 }
 
-.fighter-grid {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    padding: 2rem;
 }
 
 .fighter-card {
-    border: 3px solid var(--shadow-accent);
-    padding: 2rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--dark-text);
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    border: 2px solid var(--neon-green);
     transition: transform 0.3s ease;
-    background-size: cover;
-}
-
-.fighter-card:hover {
-    transform: scale(1.05);
-}
-
-/* Artist specific styles */
-.junebu99 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/junebu99/header.jpg'); }
-.medithagreat { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/medithagreat/header.jpg'); }
-.pkltheshaboy { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/pkltheshaboy/header.jpg'); }
-
-.artist-header {
-    height: 400px;
-    background-size: cover;
-    position: relative;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
 }
 
 .newsletter {
-    background: rgba(0,0,0,0.8);
-    padding: 2rem;
+    background: rgba(0,0,0,0.9);
+    padding: 3rem;
     text-align: center;
 }
+
+/* Add more styles for dark theme and responsive design */
