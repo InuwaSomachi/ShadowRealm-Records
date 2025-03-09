@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="ShadowRealm Records Logo" class="logo">
+        <img src="images/logo.png" alt="ShadowRealm Records" class="logo">
         <nav>
             <ul>
                 <li><a href="#artists">Artists</a></li>
@@ -19,59 +21,25 @@
         </nav>
     </header>
 
-    <section class="fighter-select" id="artists">
-        <h2>CHOOSE YOUR FIGHTER</h2>
+    <section class="shadow-select" id="artists">
+        <h2>CHOOSE A SHADOW</h2>
         <div class="grid-container">
-            <a href="artists/junebu99.html" class="fighter-card">
+            <a href="artists/junebu99.html" class="shadow-card">
                 <div class="character junebu99"></div>
                 <h3>Junebu99</h3>
             </a>
-            <!-- Repeat for other artists -->
+            <a href="artists/medi_tha_great.html" class="shadow-card">
+                <div class="character medi"></div>
+                <h3>Medi Tha Great</h3>
+            </a>
+            <a href="artists/pkltheshaboy.html" class="shadow-card">
+                <div class="character pkl"></div>
+                <h3>pkltheshaboy</h3>
+            </a>
         </div>
     </section>
 
-    <section class="newsletter" id="newsletter">
-        <h2>Realm Updates</h2>
-        <form id="newsletter-form">
-            <input type="email" placeholder="Enter your email..." required>
-            <button type="submit">SUBSCRIBE</button>
-        </form>
-    </section>
-
-    <section class="staff" id="staff">
-        <h2>Shadow Council</h2>
-        <div class="staff-grid">
-            <!-- Staff members -->
-        </div>
-    </section>
-
-    <script src="css/newsletter.js"></script>
+    <!-- Rest of index.html remains same -->
+    <script src="js/newsletter.js"></script>
 </body>
 </html>
-<!-- Update navigation links -->
-<nav>
-    <ul>
-        <li><a href="#artists">Artists</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-        <li><a href="#staff">Staff</a></li>
-    </ul>
-</nav>
-
-<!-- Update fighter cards -->
-<div class="grid-container">
-    <a href="artists/junebu99.html" class="fighter-card">
-        <div class="character junebu99"></div>
-        <h3>Junebu99</h3>
-    </a>
-    <a href="artists/medi_tha_great.html" class="fighter-card">
-        <div class="character medi"></div>
-        <h3>Medi Tha Great</h3>
-    </a>
-    <a href="artists/pkltheshaboy.html" class="fighter-card">
-        <div class="character pkl"></div>
-        <h3>pkltheshaboy</h3>
-    </a>
-</div>
-
-<!-- Update script path -->
-<script src="js/newsletter.js"></script>
