@@ -6,42 +6,75 @@
     <title>Junebu99 | ShadowRealm Records</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --theme-accent: #8B0000;
+            --theme-gradient: linear-gradient(45deg, #2a0a0a, #1a1a1a);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <a href="../index.html#artists" class="back-button">
-            <i class="fas fa-arrow-left"></i> Choose Another Shadow
+    <header class="artist-header" style="background: var(--theme-gradient), url('../images/artists/junebu99-banner.jpg')">
+        <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Shadows
         </a>
-        <img src="../images/logo.png" alt="ShadowRealm Logo" class="artist-logo">
+        <h1>Junebu99</h1>
+        <p class="artist-tagline">Poet of the Concrete Jungle</p>
     </header>
 
-    <main>
-        <section class="artist-header" style="background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../images/artists/junebu99-header.jpg')">
-            <div class="header-content">
-                <h1>Junebu99</h1>
-                <p class="artist-tagline">Ghetto Author</p>
+    <section class="artist-bio">
+        <div class="retro-terminal">
+            <div class="terminal-header">
+                <span class="terminal-button red"></span>
+                <span class="terminal-button yellow"></span>
+                <span class="terminal-button green"></span>
             </div>
-        </section>
+            <p class="typewriter-text">
+                > Loading urban chronicles...<br>
+                Hailing from forgotten alleyways where streetlights flicker like dying stars, 
+                Junebu99 resurrects 90s boom-bap spirituality through cracked smartphone speakers. 
+                His verses - equal parts survival guide and eulogy - ride distorted soul samples 
+                and trap percussion that echoes through housing project corridors. The self-taught 
+                "sidewalk scribe" documents hood realities with the precision of a crime scene investigator, 
+                his flow alternating between gravel-throated warnings and tender neighborhood eulogies. 
+                Recent works feature collaborations with underground producers, blending cassette tape 
+                hiss with blockchain-era paranoia.
+            </p>
+        </div>
+    </section>
 
-        <section class="terminal-box artist-bio">
-            <h2>Concrete Poet</h2>
-            <p>Emerging from urban labyrinths, Junebu99 fuses 90s boom-bap nostalgia with contemporary street narratives. His raw lyricism rides crackling vinyl samples and trap rhythms, creating a bridge between golden-era hip-hop and modern urban survival tales...</p>
-            
-            <div class="content-grid">
-                <div class="track-listing">
-                    <h3>Street Chronicles</h3>
-                    <ul>
-                        <li>Graffiti Psalms <span class="release-date">2024</span></li>
-                        <li>Alleyway Anthems <span class="release-date">2023</span></li>
-                    </ul>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-spotify"></i> Stream</a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Visuals</a>
+    <section class="discography">
+        <h2><i class="fas fa-compact-disc"></i> Street Scriptures</h2>
+        <div class="track-list">
+            <div class="track-card" style="border-left: 4px solid var(--theme-accent)">
+                <h3>Graffiti Psalms (2024)</h3>
+                <div class="stream-links">
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-soundcloud"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-        </section>
-    </main>
+            <!-- Add more tracks -->
+        </div>
+    </section>
+
+    <section class="gallery-grid">
+        <div class="photo-card" style="background-image: url('../images/artists/junebu99-studio.jpg')">
+            <div class="photo-caption">Midnight Studio Sessions</div>
+        </div>
+        <!-- Add more photos -->
+    </section>
+
+    <section class="social-hub">
+        <h2><i class="fas fa-tower-cell"></i> Street Frequency</h2>
+        <div class="social-links">
+            <a href="#" class="social-button instagram">
+                <i class="fab fa-instagram"></i> Visual Chronicles
+            </a>
+            <a href="#" class="social-button twitter">
+                <i class="fab fa-twitter"></i> Concrete Thoughts
+            </a>
+        </div>
+    </section>
 </body>
 </html>
