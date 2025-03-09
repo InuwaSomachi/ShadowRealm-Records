@@ -1,151 +1,127 @@
-/* === CRT Effect === */
-body.crt {
-    background: #000;
-    animation: flicker 0.15s infinite;
+/* css/style.css */
+/* === Core Variables === */
+:root {
+    /* Shadow Realm Base */
+    --shadow-primary: #0a0a0a;
+    --shadow-secondary: #1a1a1a;
+    --neon-accent: #00ff9d;
+    --blood-accent: #8B0000;
+    --gold-accent: #FFD700;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b0b0b0;
+    
+    /* Homepage Specific */
+    --fighter-border: 3px solid var(--neon-accent);
+    --fighter-shadow: 0 0 25px var(--neon-accent);
 }
 
-@keyframes flicker {
-    0% { opacity: 0.9; }
-    50% { opacity: 1; }
-    100% { opacity: 0.9; }
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.scanline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.1) 10%,
-        rgba(255,255,255,0) 100%
-    );
-    animation: scanline 6s linear infinite;
-    pointer-events: none;
+body {
+    background: var(--shadow-primary);
+    color: var(--text-primary);
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
 }
 
-/* === Pixel-Perfect Styling === */
-.pixel-logo img {
-    width: 400px;
-    image-rendering: pixelated;
-    margin: 2rem auto;
-    display: block;
-    filter: drop-shadow(0 0 10px #00ff9d);
-}
-
-.character-select {
+/* === Homepage Styles === */
+/* Character Select Grid */
+.fighter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.roster-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
 .fighter-card {
-    background: #0a0a0a;
-    padding: 1rem;
+    background: var(--shadow-secondary);
+    border: var(--fighter-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
     position: relative;
-    transition: transform 0.2s;
+    overflow: hidden;
 }
 
-.pixel-border {
-    border: 4px solid #00ff9d;
-    box-shadow: 0 0 20px rgba(0,255,157,0.3);
+.fighter-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, var(--neon-accent), transparent);
+    animation: glow 4s linear infinite;
+}
+
+@keyframes glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .fighter-card:hover {
-    transform: scale(1.05);
-    animation: glitch 0.4s infinite;
+    transform: translateY(-5px);
+    box-shadow: var(--fighter-shadow);
 }
 
-.sprite {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    image-rendering: pixelated;
-    background-size: contain;
-}
-
-.phantom {
-    background: repeating-linear-gradient(
-        45deg,
-        #1a1a1a,
-        #1a1a1a 10px,
-        #0a0a0a 10px,
-        #0a0a0a 20px
+/* === Legendary Artist Pages === */
+.legend-header {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--neon-accent);
+    background: linear-gradient(325deg, 
+        rgba(10,10,10,0.9) 0%,
+        rgba(26,26,26,0.95) 100%
     );
 }
 
-/* === Retro Text Styles === */
-.pixel-title {
-    font-family: 'Press Start 2P', cursive;
-    color: #00ff9d;
-    text-align: center;
-    margin: 2rem 0;
-    text-shadow: 0 0 10px #00ff9d;
-    animation: text-glow 2s ease-in-out infinite;
-}
-
-.pixel-text {
-    font-family: 'VT323', monospace;
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
-/* === Legend Page Framework === */
-.legend-page {
-    background: var(--shadow-primary);
-    color: var(--text-primary);
-    min-height: 100vh;
-}
-
-.legend-header {
-    background: var(--legends-gradient);
-    padding: 4rem 2rem;
-    text-align: center;
-    border-bottom: 3px solid var(--legends-accent);
-}
-
-.glow-legend {
-    font-family: 'VT323', monospace;
-    font-size: 3.5rem;
-    color: var(--legends-accent);
-    text-shadow: 0 0 25px var(--legends-accent);
-}
-
 .legend-title {
-    color: var(--text-secondary);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: var(--neon-accent);
+    text-shadow: 0 0 25px var(--neon-accent);
 }
 
-/* === Sacred Elements === */
+/* Music Embeds */
+.sacred-recordings {
+    background: var(--shadow-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border: var(--fighter-border);
+}
+
+/* Gallery Grid */
 .shadow-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
 }
 
 .gallery-item {
     height: 300px;
     background-size: cover;
+    background-position: center;
+    border-radius: 8px;
     position: relative;
-    border: 2px solid var(--legends-accent);
+    overflow: hidden;
+    border: 2px solid var(--shadow-secondary);
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
+    border-color: var(--neon-accent);
 }
 
+/* Social Links */
 .ritual-links {
     display: flex;
     justify-content: center;
@@ -161,12 +137,46 @@ body.crt {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    color: white;
     transition: all 0.3s ease;
 }
 
-/* Social Brand Colors */
-.spotify { background: #1DB954; }
-.soundcloud { background: #ff5500; }
-.instagram { background: #E1306C; }
-.bandcamp { background: #629aa9; }
-.discord { background: #5865F2; }
+.ritual-button:hover {
+    transform: scale(1.2) rotate(15deg);
+    filter: drop-shadow(0 0 5px var(--neon-accent));
+}
+
+/* === Shared Utilities === */
+.back-button {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    color: var(--neon-accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.glitch-text {
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    2% { text-shadow: 2px 0 red; }
+    4% { text-shadow: -2px 0 blue; }
+    92% { text-shadow: none; }
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .fighter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .legend-title {
+        font-size: 1.8rem;
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+}
