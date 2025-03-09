@@ -1,12 +1,14 @@
-/* === Core Variables === */
+/* ===== Core Variables ===== */
 :root {
     --shadow-primary: #0a0a0a;
     --shadow-secondary: #1a1a1a;
-    --neon-accent: #00ff9d;
-    --text-primary: #e0e0e0;
+    --neon-accent: #00cc7a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b0b0b0;
+    --border-accent: rgba(0, 204, 122, 0.3);
 }
 
-/* === Base Reset === */
+/* ===== Base Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -17,11 +19,11 @@ body {
     background: var(--shadow-primary);
     color: var(--text-primary);
     font-family: 'Space Mono', monospace;
-    line-height: 1.6;
+    line-height: 1.7;
     padding-top: 140px;
 }
 
-/* === Header Fixes === */
+/* ===== Improved Header ===== */
 header {
     position: fixed;
     top: 0;
@@ -30,17 +32,17 @@ header {
     backdrop-filter: blur(5px);
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 3px solid var(--neon-accent);
+    border-bottom: 2px solid var(--neon-accent);
 }
 
 .main-logo {
     width: 250px;
     display: block;
     margin: 0 auto 1rem;
-    filter: drop-shadow(0 0 15px var(--neon-accent));
+    filter: drop-shadow(0 0 15px rgba(0, 204, 122, 0.3));
 }
 
-/* === Character Grid Fix === */
+/* ===== Character Grid ===== */
 .character-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -52,49 +54,34 @@ header {
 
 .character-card {
     height: 400px;
-    border: 3px solid var(--neon-accent);
+    border: 2px solid var(--border-accent);
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
     transition: all 0.3s ease;
 }
 
 .character-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 35px var(--neon-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 204, 122, 0.2));
 }
 
-.character-preview {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.character-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-}
-
-/* === Artist Page Fixes === */
+/* ===== Artist Page Styles ===== */
 .artist-header {
     height: 60vh;
     margin-top: 140px;
     background-size: cover;
     background-position: center;
     position: relative;
+    border-left: 5px solid var(--neon-accent);
 }
 
-/* === Responsive Fixes === */
-@media (max-width: 768px) {
-    body {
-        padding-top: 120px;
-    }
-    
-    .main-logo {
-        width: 200px;
-    }
+.back-button {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    color: var(--neon-accent);
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    z-index: 1001;
 }
