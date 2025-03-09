@@ -8,38 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="ShadowRealm" class="label-logo">
-        <nav class="main-nav">
-            <a href="#artists" class="nav-btn active">Shadows</a>
-            <a href="#newsletter" class="nav-btn">Chronicles</a>
+    <header class="heraldic-header">
+        <div class="crest-container">
+            <img src="images/logo.png" alt="ShadowRealm Crest" class="crest-logo">
+            <div class="crest-border"></div>
+        </div>
+        <nav class="tapestry-nav">
+            <a href="#artists" class="nav-scroll illuminated">Court of Shadows</a>
+            <a href="#newsletter" class="nav-scroll">Chronicle Scrolls</a>
         </nav>
     </header>
 
-    <section class="character-select" id="artists">
-        <h2>CHOOSE YOUR SHADOW</h2>
-        <div class="grid-container">
-            <!-- Junebu99 Card -->
-            <a href="artists/junebu99.html" class="character-card street-theme">
-                <div class="character-img"></div>
-                <div class="character-info">
-                    <h3>Junebu99</h3>
-                    <p>Ghetto Author</p>
+    <section class="gallery-of-shadows" id="artists">
+        <h2 class="latin-title">Elige Umbrae Tuae</h2>
+        <div class="portrait-gallery">
+            <!-- Junebu99 Portrait -->
+            <article class="portrait-frame street-prophet">
+                <div class="portrait-canvas">
+                    <img src="images/artists/junebu99/portrait.jpg" alt="The Ghetto Prophet">
                 </div>
-            </a>
+                <div class="plaque">
+                    <h3>Junebu99</h3>
+                    <p>Scriptor Viae</p>
+                    <a href="artists/junebu99.html" class="study-button">Enter Study</a>
+                </div>
+            </article>
             
-            <!-- Medi Card -->
-            <a href="artists/medi_tha_great.html" class="character-card hustle-theme">
-                <!-- Same structure -->
-            </a>
-            
-            <!-- pkl Card -->
-            <a href="artists/pkltheshaboy.html" class="character-card enigma-theme">
-                <!-- Same structure -->
-            </a>
+            <!-- Other artist portraits -->
         </div>
     </section>
-
-    <script src="js/newsletter.js"></script>
 </body>
 </html>
