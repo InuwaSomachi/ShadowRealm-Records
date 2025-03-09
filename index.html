@@ -1,51 +1,88 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>ShadowRealm Records</title>  
-    <link rel="stylesheet" href="css/style.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
-</head>  
-<body>  
-    <header class="neon-header">  
-        <div class="logo-holo">  
-            <img src="images/logo.png" alt="ShadowRealm" class="hologram-logo">  
-            <div class="logo-glitch"></div>  
-        </div>  
-        <nav class="cyber-nav">  
-            <a href="#artists" class="nav-pulse">  
-                <span class="nav-before"></span>  
-                SHADOW ARCHIVES  
-                <span class="nav-after"></span>  
-            </a>  
-        </nav>  
-    </header>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowRealm Records</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <img src="images/logo.png" alt="ShadowRealm Records" class="main-logo">
+        <nav class="main-nav">
+            <a href="#artists" class="nav-link active">Shadows</a>
+            <a href="#newsletter" class="nav-link">Chronicles</a>
+        </nav>
+    </header>
 
-    <main class="grid-matrix">  
-        <div class="terminal-header">  
-            <div class="scan-line"></div>  
-            <h1 class="matrix-title">// SHADOW OPERATIVES</h1>  
-        </div>  
+    <section class="shadow-select" id="artists">
+        <div class="section-header">
+            <h2>▣ CHOOSE YOUR SHADOW ▣</h2>
+            <div class="header-underline"></div>
+        </div>
         
-        <div class="operator-grid">  
-            <!-- Junebu99 Card -->  
-            <article class="operator-card street-prophet">  
-                <div class="card-hud">  
-                    <div class="hud-line"></div>  
-                    <h3>JUNEBU99</h3>  
-                    <p>URBAN SCRIBE</p>  
-                </div>  
-                <div class="card-bg"  
-                     style="background-image: url('images/artists/junebu99/header.jpg')">  
-                </div>  
-                <a href="artists/junebu99.html" class="card-overlay">  
-                    <span class="access-code">> ACCESS PROFILE</span>  
-                </a>  
-            </article>  
+        <div class="character-grid">
+            <!-- Junebu99 Card -->
+            <a href="artists/junebu99.html" class="character-card street-theme">
+                <div class="character-preview" 
+                     style="background-image: url('images/artists/junebu99/header.jpg')">
+                    <div class="character-overlay">
+                        <h3>JUNEBU99</h3>
+                        <p>The Ghetto Author</p>
+                    </div>
+                </div>
+                <div class="character-stats">
+                    <span class="stat-tag">Lyrical Alchemist</span>
+                    <span class="stat-tag">90s Revivalist</span>
+                </div>
+            </a>
 
-            <!-- Repeat for other artists -->  
-        </div>  
-    </main>  
-</body>  
-</html>  
+            <!-- Medi Tha Great Card -->
+            <a href="artists/medi_tha_great.html" class="character-card hustle-theme">
+                <div class="character-preview" 
+                     style="background-image: url('images/artists/medi_tha_great/header.jpg')">
+                    <div class="character-overlay">
+                        <h3>MEDI THA GREAT</h3>
+                        <p>The Lavish Hustler</p>
+                    </div>
+                </div>
+                <div class="character-stats">
+                    <span class="stat-tag">Wealth Architect</span>
+                    <span class="stat-tag">Trap Visionary</span>
+                </div>
+            </a>
+
+            <!-- pkltheshaboy Card -->
+            <a href="artists/pkltheshaboy.html" class="character-card enigma-theme">
+                <div class="character-preview" 
+                     style="background-image: url('images/artists/pkltheshaboy/header.jpg')">
+                    <div class="character-overlay">
+                        <h3>pkltheshaboy</h3>
+                        <p>The Digital Phantom</p>
+                    </div>
+                </div>
+                <div class="character-stats">
+                    <span class="stat-tag">Genre Shapeshifter</span>
+                    <span class="stat-tag">Visual Cryptid</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="shadow-newsletter" id="newsletter">
+        <div class="newsletter-container">
+            <h3>Join the Shadow Network</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your dark email..." required>
+                <button type="submit">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/newsletter.js"></script>
+</body>
+</html>
