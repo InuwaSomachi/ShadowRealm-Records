@@ -136,3 +136,35 @@ body {
     98% { filter: hue-rotate(180deg); }
     100% { filter: hue-rotate(0deg); }
 }
+.main-logo {
+    width: 180px; /* Was 300px */
+    margin: 1rem auto 0.5rem;
+}
+.grid-container {
+    gap: 1rem; /* Was 2rem */
+    padding: 1rem; /* Add padding */
+}
+@media (max-width: 768px) {
+    .character-card {
+        margin: 0 0.5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+.character-card {
+    background: #131313;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,255,157,0.2);
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+h2 {
+    font-family: 'Space Mono', monospace;
+}
