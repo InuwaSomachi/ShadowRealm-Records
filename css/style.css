@@ -1,21 +1,15 @@
-/* css/style.css */
 /* === Core Variables === */
 :root {
-    /* Shadow Realm Base */
     --shadow-primary: #0a0a0a;
     --shadow-secondary: #1a1a1a;
     --neon-accent: #00ff9d;
-    --blood-accent: #8B0000;
-    --gold-accent: #FFD700;
-    --text-primary: #f0f0f0;
-    --text-secondary: #b0b0b0;
-    
-    /* Homepage Specific */
-    --fighter-border: 3px solid var(--neon-accent);
-    --fighter-shadow: 0 0 25px var(--neon-accent);
+    --street-accent: #8B0000;
+    --hustle-accent: #FFD700;
+    --enigma-accent: #4a4a4a;
+    --text-primary: #e0e0e0;
 }
 
-/* === Base Reset === */
+/* === Base Styles === */
 * {
     margin: 0;
     padding: 0;
@@ -25,13 +19,19 @@
 body {
     background: var(--shadow-primary);
     color: var(--text-primary);
-    font-family: 'VT323', monospace;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
 
-/* === Homepage Styles === */
-/* Character Select Grid */
-.fighter-grid {
+.label-logo {
+    width: 200px;
+    display: block;
+    margin: 1rem auto;
+    filter: drop-shadow(0 0 10px var(--neon-accent));
+}
+
+/* === Character Select Grid === */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -40,143 +40,69 @@ body {
     margin: 0 auto;
 }
 
-.fighter-card {
+.character-card {
     background: var(--shadow-secondary);
-    border: var(--fighter-border);
+    border: 2px solid;
     border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.fighter-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, var(--neon-accent), transparent);
-    animation: glow 4s linear infinite;
-}
-
-@keyframes glow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.fighter-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--fighter-shadow);
-}
-
-/* === Legendary Artist Pages === */
-.legend-header {
-    padding: 4rem 2rem;
-    text-align: center;
-    border-bottom: 3px solid var(--neon-accent);
-    background: linear-gradient(325deg, 
-        rgba(10,10,10,0.9) 0%,
-        rgba(26,26,26,0.95) 100%
-    );
-}
-
-.legend-title {
-    font-size: 2.5rem;
-    color: var(--neon-accent);
-    text-shadow: 0 0 25px var(--neon-accent);
-}
-
-/* Music Embeds */
-.sacred-recordings {
-    background: var(--shadow-secondary);
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    border: var(--fighter-border);
-}
-
-/* Gallery Grid */
-.shadow-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem 0;
-}
-
-.gallery-item {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--shadow-secondary);
+    padding: 1rem;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
-    transform: scale(1.03);
-    border-color: var(--neon-accent);
+.street-theme { border-color: var(--street-accent); }
+.hustle-theme { border-color: var(--hustle-accent); }
+.enigma-theme { border-color: var(--enigma-accent); }
+
+.character-card:hover {
+    transform: translateY(-5px);
 }
 
-/* Social Links */
-.ritual-links {
-    display: flex;
-    justify-content: center;
+.character-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+/* === Artist Page Template === */
+.artist-header {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid;
+}
+
+.junebu99-header { border-color: var(--street-accent); }
+.medi-header { border-color: var(--hustle-accent); }
+.pkl-header { border-color: var(--enigma-accent); }
+
+.legend-description {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-left: 4px solid;
+}
+
+/* === Media Sections === */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
 }
 
-.ritual-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.social-hub {
     display: flex;
-    align-items: center;
+    gap: 1.5rem;
     justify-content: center;
+    padding: 2rem;
+}
+
+.social-link {
     font-size: 1.5rem;
-    color: white;
-    transition: all 0.3s ease;
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
-.ritual-button:hover {
-    transform: scale(1.2) rotate(15deg);
-    filter: drop-shadow(0 0 5px var(--neon-accent));
-}
-
-/* === Shared Utilities === */
-.back-button {
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
+.social-link:hover {
     color: var(--neon-accent);
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.glitch-text {
-    animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch {
-    2% { text-shadow: 2px 0 red; }
-    4% { text-shadow: -2px 0 blue; }
-    92% { text-shadow: none; }
-}
-
-/* === Responsive Design === */
-@media (max-width: 768px) {
-    .fighter-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .legend-title {
-        font-size: 1.8rem;
-    }
-    
-    .gallery-item {
-        height: 200px;
-    }
 }
