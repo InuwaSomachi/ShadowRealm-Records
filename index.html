@@ -4,59 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="crt">
-    <div class="scanline"></div>
-    
-    <!-- Main Content -->
-    <main>
-        <!-- Logo Linking to Home -->
-        <a href="#artists" class="pixel-logo">
-            <img src="images/logo.png" alt="ShadowRealm Records">
-        </a>
+<body>
+    <header>
+        <img src="images/logo.png" alt="ShadowRealm" class="label-logo">
+        <nav class="main-nav">
+            <a href="#artists" class="nav-btn active">Shadows</a>
+            <a href="#newsletter" class="nav-btn">Chronicles</a>
+        </nav>
+    </header>
 
-        <!-- Pixel Art Character Select -->
-        <section id="artists" class="character-select">
-            <h1 class="pixel-title glitch">CHOOSE YOUR SHADOW</h1>
+    <section class="character-select" id="artists">
+        <h2>CHOOSE YOUR SHADOW</h2>
+        <div class="grid-container">
+            <!-- Junebu99 Card -->
+            <a href="artists/junebu99.html" class="character-card street-theme">
+                <div class="character-img"></div>
+                <div class="character-info">
+                    <h3>Junebu99</h3>
+                    <p>Ghetto Author</p>
+                </div>
+            </a>
             
-            <div class="roster-grid">
-                <!-- Junebu99 -->
-                <a href="artists/junebu99.html" class="fighter-card pixel-border">
-                    <div class="sprite" 
-                         style="background-image: url('images/artists/junebu99-sprite.png')"></div>
-                    <div class="fighter-info">
-                        <h2>JUNEBU99</h2>
-                        <p class="pixel-text">STREET POET</p>
-                        <p class="pixel-text">HP: ▮▮▮▮▯</p>
-                    </div>
-                </a>
+            <!-- Medi Card -->
+            <a href="artists/medi_tha_great.html" class="character-card hustle-theme">
+                <!-- Same structure -->
+            </a>
+            
+            <!-- pkl Card -->
+            <a href="artists/pkltheshaboy.html" class="character-card enigma-theme">
+                <!-- Same structure -->
+            </a>
+        </div>
+    </section>
 
-                <!-- Medi Tha Great -->
-                <a href="artists/medi_tha_great.html" class="fighter-card pixel-border">
-                    <div class="sprite" 
-                         style="background-image: url('images/artists/medi-sprite.png')"></div>
-                    <div class="fighter-info">
-                        <h2>MEDI THA GREAT</h2>
-                        <p class="pixel-text">BOSS HUSTLER</p>
-                        <p class="pixel-text">HP: ▮▮▮▮▮</p>
-                    </div>
-                </a>
-
-                <!-- pkltheshaboy -->
-                <a href="artists/pkltheshaboy.html" class="fighter-card pixel-border">
-                    <div class="sprite phantom"></div>
-                    <div class="fighter-info">
-                        <h2>PKLTHESHABOY</h2>
-                        <p class="pixel-text">DIGITAL PHANTOM</p>
-                        <p class="pixel-text">HP: ▮▯▯▯▯</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <script src="js/crt-effect.js"></script>
+    <script src="js/newsletter.js"></script>
 </body>
 </html>
