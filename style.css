@@ -1,35 +1,62 @@
 :root {
     --shadow-primary: #1a1a1a;
-    --shadow-accent: #4a148c;
-    --blood-red: #8b0000;
+    --shadow-accent: #8b0000;
+    --dark-text: #e0e0e0;
 }
 
 body {
-    background: linear-gradient(to right, #0a0a0a, #2d2d2d);
-    color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
+    background: var(--shadow-primary);
+    color: var(--dark-text);
+    font-family: 'Courier New', monospace;
 }
 
-.shadow-header {
-    background: rgba(0, 0, 0, 0.9);
+.logo {
+    width: 300px;
+    margin: 2rem auto;
+    display: block;
+}
+
+.fighter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.fighter-card {
+    border: 3px solid var(--shadow-accent);
     padding: 2rem;
     text-align: center;
-    border-bottom: 2px solid var(--blood-red);
-}
-
-.gradient-text {
-    background: linear-gradient(45deg, #8b0000, #4a148c);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.artist-card {
-    background: rgba(26, 26, 26, 0.95);
-    border-radius: 15px;
+    text-decoration: none;
+    color: var(--dark-text);
     transition: transform 0.3s ease;
+    background-size: cover;
 }
 
-.artist-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px var(--shadow-accent);
+.fighter-card:hover {
+    transform: scale(1.05);
+}
+
+/* Artist specific styles */
+.junebu99 { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/junebu99/header.jpg'); }
+.medithagreat { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/medithagreat/header.jpg'); }
+.pkltheshaboy { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/artists/pkltheshaboy/header.jpg'); }
+
+.artist-header {
+    height: 400px;
+    background-size: cover;
+    position: relative;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.newsletter {
+    background: rgba(0,0,0,0.8);
+    padding: 2rem;
+    text-align: center;
 }
