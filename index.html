@@ -5,45 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="home">
+<body>
     <header>
-        <img src="images/logo.png" alt="ShadowRealm Records" class="logo">
+        <img src="images/logo.png" alt="ShadowRealm Records Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#staff">Staff</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section class="fighter-select">
-        <h2>Choose Your Artist</h2>
-        <div class="fighter-grid">
-            <a href="artists/junebu99.html" class="fighter-card junebu99">
+
+    <section class="fighter-select" id="artists">
+        <h2>CHOOSE YOUR FIGHTER</h2>
+        <div class="grid-container">
+            <a href="artists/junebu99.html" class="fighter-card">
+                <div class="character junebu99"></div>
                 <h3>Junebu99</h3>
-                <p>Soulful R&B Lyricist</p>
             </a>
-            <a href="artists/medithagreat.html" class="fighter-card medithagreat">
-                <h3>Medi Tha Great</h3>
-                <p>Lavish Hustler</p>
-            </a>
-            <a href="artists/pkltheshaboy.html" class="fighter-card pkltheshaboy">
-                <h3>PKLtheshaboy</h3>
-                <p>Mysterious Creator</p>
-            </a>
+            <!-- Repeat for other artists -->
         </div>
     </section>
 
-    <section class="newsletter">
-        <h2>Shadow Updates</h2>
+    <section class="newsletter" id="newsletter">
+        <h2>Realm Updates</h2>
         <form id="newsletter-form">
-            <input type="email" placeholder="Enter your dark essence..." required>
-            <button type="submit">Subscribe</button>
+            <input type="email" placeholder="Enter your email..." required>
+            <button type="submit">SUBSCRIBE</button>
         </form>
     </section>
 
-    <section class="staff">
-        <h2>Shadow Keepers</h2>
+    <section class="staff" id="staff">
+        <h2>Shadow Council</h2>
         <div class="staff-grid">
-            <!-- Add staff members here -->
+            <!-- Staff members -->
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="css/newsletter.js"></script>
 </body>
 </html>
