@@ -8,35 +8,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .artist-header {
-            background-image: url('../images/medi-header.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                            url('../images/artists/medi-header.jpg');
+            border-left: 5px solid #FFD700;
         }
-        .artist-bio {
-            border-color: var(--gold-accent);
-        }
-        .social-links a:hover {
-            color: var(--gold-accent);
+        .gallery-item:hover {
+            border-color: #FFD700;
         }
     </style>
 </head>
 <body>
-    <!-- Same header structure as junebu99.html -->
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" alt="ShadowRealm Logo" class="main-logo"></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html#artists">Shadows</a></li>
+                <li><a href="../index.html#newsletter">Chronicles</a></li>
+                <li><a href="../index.html#staff">Keepers</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="artist-header">
-        <h1>Medi Tha Great</h1>
-    </section>
+    <main>
+        <section class="artist-header"></section>
 
-    <section class="artist-bio">
-        <p>The lavish hustler turning boardroom strategies into street symphonies. Medi Tha Great's music is a opulent blend of trap grandeur and motivational lyricism, chronicling his rise from concrete jungles to penthouse suites. His diamond-cut flow slices through luxurious production featuring orchestral hits and 808 thunder. Every track serves as both flex and blueprint, mixing designer label references with grindset mentality. The self-made mogul's verses balance champagne wishes with payroll realities, creating anthems for those building empires by any means necessary.</p>
-        
-        <div class="social-links">
-            <a href="[Apple Music URL]" target="_blank"><i class="fab fa-apple"></i></a>
-            <a href="[Twitter URL]" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="[Instagram URL]" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="[TikTok URL]" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-    </section>
+        <section class="terminal-box artist-bio">
+            <h2>The Hustler's Symphony</h2>
+            <p>Medi Tha Great conducts opulent street symphonies where diamond-studded watches keep time over 808 thunder. His music is a boardroom-meets-block-party blend, stacking motivational mantras over orchestral trap productions. The self-made maestro chronicles his rise from project windows to penthouse views, turning every bar into a business lesson dipped in champagne. With flows sharper than Italian leather shoes and punchlines heavier than gold chains, Medi's tracks serve as both flex and blueprint - part victory lap, part masterclass in turning nothing into everything. His sound: the clink of ice in crystal glasses over subway-grate steam.</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-apple"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
 
-    <!-- Similar gallery section -->
+        <section class="gallery-grid">
+            <div class="gallery-item track-card">
+                <div class="track-artwork" style="background-image: url('https://via.placeholder.com/400x400/1a1a1a/FFD700?text=TRACK+ART')">
+                    <div class="play-button">▶</div>
+                </div>
+                <h3>Marble Floor Dreams</h3>
+                <div class="stream-links">
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+
+            <div class="gallery-item photo-card">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/FFD700?text=STUDIO+SESSION" alt="Recording">
+                <div class="photo-caption">Studio Majesty</div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-<link rel="stylesheet" href="../css/style.css">
