@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="ShadowRealm Records" class="logo">
+        <img src="https://via.placeholder.com/300x100/000000/00ff9d?text=ShadowRealm+Logo" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#artists">Artists</a></li>
@@ -25,21 +25,28 @@
         <h2>CHOOSE A SHADOW</h2>
         <div class="grid-container">
             <a href="artists/junebu99.html" class="shadow-card">
-                <div class="character junebu99"></div>
+                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/8B0000?text=Junebu99')"></div>
                 <h3>Junebu99</h3>
             </a>
             <a href="artists/medi_tha_great.html" class="shadow-card">
-                <div class="character medi"></div>
+                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/FFD700?text=Medi+Tha+Great')"></div>
                 <h3>Medi Tha Great</h3>
             </a>
             <a href="artists/pkltheshaboy.html" class="shadow-card">
-                <div class="character pkl"></div>
+                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/4a4a4a?text=pkltheshaboy')"></div>
                 <h3>pkltheshaboy</h3>
             </a>
         </div>
     </section>
 
-    <!-- Rest of index.html remains same -->
+    <section class="newsletter" id="newsletter">
+        <h2>Shadow Chronicles</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Enter your dark email..." required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </section>
+
     <script src="js/newsletter.js"></script>
 </body>
 </html>
