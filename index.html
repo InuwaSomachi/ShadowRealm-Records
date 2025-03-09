@@ -6,48 +6,47 @@
     <title>ShadowRealm Records</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="ShadowRealm Records" class="main-logo">
-        <nav>
+        <img src="images/logo.png" alt="ShadowRealm Logo" class="main-logo">
+        <nav class="main-nav">
             <ul>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#staff">Staff</a></li>
+                <li><a href="#artists">Shadows</a></li>
+                <li><a href="#newsletter">Chronicles</a></li>
+                <li><a href="#staff">Keepers</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="shadow-select" id="artists">
-        <h2>CHOOSE A SHADOW</h2>
-        <div class="grid-container">
-            <a href="artists/junebu99.html" class="shadow-card">
-                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/8B0000?text=Junebu99')"></div>
-                <h3>Junebu99</h3>
-            </a>
-            <a href="artists/medi_tha_great.html" class="shadow-card">
-                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/FFD700?text=Medi+Tha+Great')"></div>
-                <h3>Medi Tha Great</h3>
-            </a>
-            <a href="artists/pkltheshaboy.html" class="shadow-card">
-                <div class="artist-preview" style="background-image: url('https://via.placeholder.com/400x300/1a1a1a/4a4a4a?text=pkltheshaboy')"></div>
-                <h3>pkltheshaboy</h3>
-            </a>
-        </div>
-    </section>
+    <main>
+        <section class="shadow-select" id="artists">
+            <h2 class="arcade-title">CHOOSE A SHADOW</h2>
+            <div class="character-grid">
+                <a href="artists/junebu99.html" class="character-card">
+                    <div class="character-preview junebu99">
+                        <div class="character-info">
+                            <h3>Junebu99</h3>
+                            <p>Ghetto Author</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Repeat for other artists -->
+            </div>
+        </section>
 
-    <section class="newsletter" id="newsletter">
-        <h2>Shadow Chronicles</h2>
-        <form id="newsletter-form">
-            <input type="email" placeholder="Enter your dark email..." required>
-            <button type="submit">SUBSCRIBE</button>
-        </form>
-    </section>
+        <section class="newsletter-section" id="newsletter">
+            <div class="terminal-box">
+                <h2>Join the Shadow Network</h2>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="ENTER DARK EMAIL..." required>
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <script src="js/newsletter.js"></script>
 </body>
 </html>
-<img src="https://via.placeholder.com/300x100/000/00ff9d?text=ShadowRealm+Logo" class="main-logo">
-<link rel="stylesheet" href="css/style.css">
-
