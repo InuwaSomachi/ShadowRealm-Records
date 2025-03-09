@@ -1,94 +1,88 @@
 /* === Core Theme === */  
-:root {  
-    --shadow-primary: #0a0a0a;  
-    --shadow-secondary: #1a1a1a;  
-    --neon-green: #00ff9d;  
-    --street-red: #8B0000;  
-    --hustle-gold: #FFD700;  
-    --enigma-gray: #4a4a4a;  
-    --text-primary: #e0e0e0;  
-}  
+:root {
+    --shadow-primary: #0a0a0a;
+    --shadow-secondary: #131313;
+    --neon-accent: #00ff9d;
+    --text-primary: #f0f0f0;
+}
 
-* {  
-    margin: 0;  
-    padding: 0;  
-    box-sizing: border-box;  
-}  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body {  
-    background: var(--shadow-primary);  
-    color: var(--text-primary);  
-    font-family: 'Courier New', monospace;  
-    line-height: 1.6;  
-}  
+body {
+    background: var(--shadow-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
 
-.main-logo {  
-    width: 200px;  
-    display: block;  
-    margin: 1rem auto;  
-    image-rendering: pixelated;  
-}  
+.main-logo {
+    width: 180px;
+    display: block;
+    margin: 1rem auto 0.5rem;
+    filter: drop-shadow(0 0 8px rgba(0,255,157,0.3));
+}
 
-/* === Character Grid === */  
-.shadow-grid {  
-    padding: 2rem;  
-    max-width: 1200px;  
-    margin: 0 auto;  
-}  
-
-.grid-container {  
-    display: grid;  
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
-    gap: 1.5rem;  
-    margin-top: 2rem;  
-}  
-
-.character-card {  
-    background: var(--shadow-secondary);  
-    border: 2px solid;  
-    padding: 1rem;  
-    text-decoration: none;  
-    transition: transform 0.2s ease;  
-}  
-
-.street-card { border-color: var(--street-red); }  
-.hustle-card { border-color: var(--hustle-gold); }  
-.enigma-card { border-color: var(--enigma-gray); }  
-
-.character-card:hover {  
-    transform: translateY(-3px);  
-}  
-
-.character-preview {  
-    height: 250px;  
-    background-size: cover;  
-    background-position: center;  
-    border: 1px solid rgba(0,0,0,0.3);  
-}  
-
-.character-info {  
-    padding: 1rem;  
-    text-align: center;  
-}  
-
-.pixel-underline {  
-    width: 50%;  
-    height: 2px;  
-    background: var(--neon-green);  
-    margin: 0.5rem auto;  
-}  
-/* === Artist Page Consistency === */
-.legend-profile {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
+}
+
+.character-card {
+    background: var(--shadow-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.character-preview {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.character-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Modern Typography */
+h1, h2 {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: -0.03em;
+}
+
+/* Artist Page Improvements */
+.artist-header {
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .media-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 3rem 0;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+    .main-logo {
+        width: 140px;
+    }
 }
 
 .photo-item {
