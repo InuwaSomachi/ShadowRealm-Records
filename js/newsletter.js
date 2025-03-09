@@ -1,23 +1,23 @@
+// newsletter.js
 document.getElementById('newsletter-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const email = document.querySelector('#newsletter-form input[type="email"]').value;
+    const formData = new FormData(this);
     
-    // Formspree integration
-    fetch('https://formspree.io/f/your-form-id', {
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
+        body: formData,
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email: email })
+            'Accept': 'application/json'
+        }
     })
     .then(response => {
         if (response.ok) {
-            alert('Welcome to the Shadow Realm! You\'ll receive updates from the underground.');
-            document.getElementById('newsletter-form').reset();
+            this.reset();
+            alert('Welcome to the Shadow Realm! You will now receive whispers from the void.');
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Something went dark... Please try again later.');
+        alert('The shadows reject your submission...try again.');
     });
 });
