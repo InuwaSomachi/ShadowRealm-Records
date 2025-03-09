@@ -1,118 +1,79 @@
-/* === Velvet Void Theme === */
-:root {
-    --velvet-primary: #0a0806;
-    --gilded-accent: #c5a880;
-    --blood-accent: #6b0f1a;
-    --parchment: #e8e1d7;
-    --ink-primary: #2a2520;
-    --shadow-silk: linear-gradient(45deg, 
-        rgba(10,8,6,0.9) 0%, 
-        rgba(42,37,32,0.95) 100%);
-}
+/* === Core Theme === */  
+:root {  
+    --shadow-primary: #0a0a0a;  
+    --shadow-secondary: #1a1a1a;  
+    --neon-green: #00ff9d;  
+    --street-red: #8B0000;  
+    --hustle-gold: #FFD700;  
+    --enigma-gray: #4a4a4a;  
+    --text-primary: #e0e0e0;  
+}  
 
-body {
-    background: var(--velvet-primary) url('images/textures/velvet.jpg');
-    color: var(--parchment);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-}
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
 
-/* === Heraldic Header === */
-.heraldic-header {
-    padding: 2rem;
-    border-bottom: 3px solid var(--gilded-accent);
-    background: var(--shadow-silk);
-}
+body {  
+    background: var(--shadow-primary);  
+    color: var(--text-primary);  
+    font-family: 'Courier New', monospace;  
+    line-height: 1.6;  
+}  
 
-.crest-logo {
-    width: 180px;
-    filter: drop-shadow(0 0 10px rgba(197,168,128,0.3));
-}
+.main-logo {  
+    width: 200px;  
+    display: block;  
+    margin: 1rem auto;  
+    image-rendering: pixelated;  
+}  
 
-.crest-border {
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    border: 2px solid var(--gilded-accent);
-    transform: rotate(45deg);
-    pointer-events: none;
-}
+/* === Character Grid === */  
+.shadow-grid {  
+    padding: 2rem;  
+    max-width: 1200px;  
+    margin: 0 auto;  
+}  
 
-/* === Portrait Gallery === */
-.portrait-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-    padding: 3rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+.grid-container {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+    gap: 1.5rem;  
+    margin-top: 2rem;  
+}  
 
-.portrait-frame {
-    background: #080604 url('images/textures/parchment.png');
-    border: 2px solid var(--gilded-accent);
-    padding: 1rem;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+.character-card {  
+    background: var(--shadow-secondary);  
+    border: 2px solid;  
+    padding: 1rem;  
+    text-decoration: none;  
+    transition: transform 0.2s ease;  
+}  
 
-.portrait-frame:hover {
-    transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
-}
+.street-card { border-color: var(--street-red); }  
+.hustle-card { border-color: var(--hustle-gold); }  
+.enigma-card { border-color: var(--enigma-gray); }  
 
-.portrait-canvas {
-    height: 400px;
-    background: var(--ink-primary);
-    border: 1px solid var(--gilded-accent);
-    overflow: hidden;
-}
+.character-card:hover {  
+    transform: translateY(-3px);  
+}  
 
-.portrait-canvas img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) contrast(120%);
-    transition: filter 0.4s;
-}
+.character-preview {  
+    height: 250px;  
+    background-size: cover;  
+    background-position: center;  
+    border: 1px solid rgba(0,0,0,0.3);  
+}  
 
-.portrait-frame:hover .portrait-canvas img {
-    filter: grayscale(30%) contrast(110%);
-}
+.character-info {  
+    padding: 1rem;  
+    text-align: center;  
+}  
 
-.plaque {
-    text-align: center;
-    padding: 1.5rem;
-    border-top: 2px solid var(--gilded-accent);
-    margin-top: 1rem;
-}
-
-.study-button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: var(--blood-accent);
-    color: var(--parchment);
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
-
-/* === Artist Page Template === */
-.artist-manuscript {
-    background: url('images/textures/parchment.png');
-    color: var(--ink-primary);
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 3rem;
-    border: 2px solid var(--gilded-accent);
-    box-shadow: 0 0 40px rgba(0,0,0,0.3);
-}
-
-.illuminated-text::first-letter {
-    font-family: 'UnifrakturMaguntia', cursive;
-    float: left;
-    font-size: 4em;
-    line-height: 0.8;
-    margin-right: 0.2em;
-    color: var(--blood-accent);
-}
+.pixel-underline {  
+    width: 50%;  
+    height: 2px;  
+    background: var(--neon-green);  
+    margin: 0.5rem auto;  
+}  
