@@ -5,54 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <img src="images/logo.png" alt="ShadowRealm Logo" class="main-logo">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#artists">Shadows</a></li>
-                <li><a href="#newsletter">Chronicles</a></li>
-                <li><a href="#staff">Keepers</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<body class="crt">
+    <div class="scanline"></div>
+    
+    <!-- Main Content -->
     <main>
-        <section class="shadow-select" id="artists">
-            <h2 class="arcade-title">CHOOSE A SHADOW</h2>
-            <div class="character-grid">
-                <!-- Junebu99 Card -->
-                <a href="artists/junebu99.html" class="character-card">
-                    <div class="character-preview" style="background-image: url('images/artists/junebu99-thumb.jpg')">
-                        <div class="character-info">
-                            <h3>Junebu99</h3>
-                            <p class="artist-description">90s Soul · Street Poetry</p>
-                            <div class="genre-tags">
-                                <span class="tag">Boom Bap</span>
-                                <span class="tag">Trap</span>
-                            </div>
-                        </div>
+        <!-- Logo Linking to Home -->
+        <a href="#artists" class="pixel-logo">
+            <img src="images/logo.png" alt="ShadowRealm Records">
+        </a>
+
+        <!-- Pixel Art Character Select -->
+        <section id="artists" class="character-select">
+            <h1 class="pixel-title glitch">CHOOSE YOUR SHADOW</h1>
+            
+            <div class="roster-grid">
+                <!-- Junebu99 -->
+                <a href="artists/junebu99.html" class="fighter-card pixel-border">
+                    <div class="sprite" 
+                         style="background-image: url('images/artists/junebu99-sprite.png')"></div>
+                    <div class="fighter-info">
+                        <h2>JUNEBU99</h2>
+                        <p class="pixel-text">STREET POET</p>
+                        <p class="pixel-text">HP: ▮▮▮▮▯</p>
                     </div>
                 </a>
-                
-                <!-- Repeat for other artists -->
-            </div>
-        </section>
 
-        <section class="newsletter-section" id="newsletter">
-            <div class="terminal-box">
-                <h2>Join the Shadow Network</h2>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="ENTER DARK EMAIL..." required>
-                    <button type="submit">SUBSCRIBE</button>
-                </form>
+                <!-- Medi Tha Great -->
+                <a href="artists/medi_tha_great.html" class="fighter-card pixel-border">
+                    <div class="sprite" 
+                         style="background-image: url('images/artists/medi-sprite.png')"></div>
+                    <div class="fighter-info">
+                        <h2>MEDI THA GREAT</h2>
+                        <p class="pixel-text">BOSS HUSTLER</p>
+                        <p class="pixel-text">HP: ▮▮▮▮▮</p>
+                    </div>
+                </a>
+
+                <!-- pkltheshaboy -->
+                <a href="artists/pkltheshaboy.html" class="fighter-card pixel-border">
+                    <div class="sprite phantom"></div>
+                    <div class="fighter-info">
+                        <h2>PKLTHESHABOY</h2>
+                        <p class="pixel-text">DIGITAL PHANTOM</p>
+                        <p class="pixel-text">HP: ▮▯▯▯▯</p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
 
-    <script src="js/newsletter.js"></script>
+    <script src="js/crt-effect.js"></script>
 </body>
 </html>
