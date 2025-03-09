@@ -8,34 +8,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .artist-header {
-            background-image: url('../images/pkl-header.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                            url('../images/artists/pkl-header.jpg');
+            border-left: 5px solid #4a4a4a;
         }
-        .artist-bio {
+        .gallery-item:hover {
             border-color: #4a4a4a;
-        }
-        .social-links a:hover {
-            color: #4a4a4a;
         }
     </style>
 </head>
 <body>
-    <!-- Same header structure -->
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" alt="ShadowRealm Logo" class="main-logo"></a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html#artists">Shadows</a></li>
+                <li><a href="../index.html#newsletter">Chronicles</a></li>
+                <li><a href="../index.html#staff">Keepers</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="artist-header">
-        <h1>pkltheshaboy</h1>
-    </section>
+    <main>
+        <section class="artist-header"></section>
 
-    <section class="artist-bio">
-        <p>The enigmatic shapeshifter of modern sound. pkltheshaboy exists in the liminal space between genres, blending industrial textures with ethereal melodies. His anonymous persona fuels speculation, with tracks arriving like cryptic transmissions from the digital void. From glitch-hop to darkwave, each release reinvents his style while maintaining a signature atmospheric dread. The faceless phenomenon's music videos feature distorted visuals and body doubles, maintaining his mystery while racking up millions of streams. A cult favorite among cyberpunk enthusiasts and experimental music fans alike.</p>
-        
-        <div class="social-links">
-            <a href="[Bandcamp URL]" target="_blank"><i class="fab fa-bandcamp"></i></a>
-            <a href="[Reddit URL]" target="_blank"><i class="fab fa-reddit"></i></a>
-            <a href="[Spotify URL]" target="_blank"><i class="fab fa-spotify"></i></a>
-        </div>
-    </section>
+        <section class="terminal-box artist-bio">
+            <h2>The Digital Phantom</h2>
+            <p>pkltheshaboy exists in the static between radio frequencies, his identity obscured by digital artifacts and sonic smoke screens. This shape-shifting enigma crafts genre-fluid nightmarescapes where industrial percussion collides with ethereal synths, creating music that feels transmitted from a parallel dimension. His tracks arrive as cryptic audio manifests - glitch-hop mutations one week, dystopian lullabies the next. The faceless phenomenon's visual aesthetic features distorted VHS footage and body doubles, ensuring his true form remains conjecture. pkl's music: the sound of a dial-up modem connecting to the afterlife, heard through a wall of broken monitors.</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-bandcamp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-reddit"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-soundcloud"></i></a>
+            </div>
+        </section>
 
-    <!-- Gallery section -->
+        <section class="gallery-grid">
+            <div class="gallery-item track-card">
+                <div class="track-artwork" style="background-image: url('https://via.placeholder.com/400x400/1a1a1a/4a4a4a?text=TRACK+ART')">
+                    <div class="play-button">▶</div>
+                </div>
+                <h3>Static Communion</h3>
+                <div class="stream-links">
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+
+            <div class="gallery-item photo-card">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/4a4a4a?text=GHOST+SESSION" alt="Recording">
+                <div class="photo-caption">Anonymous Sessions</div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-<link rel="stylesheet" href="../css/style.css">
