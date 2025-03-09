@@ -10,66 +10,57 @@
         .artist-header {
             background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                             url('../images/artists/junebu99-header.jpg');
-            border-left: 5px solid var(--blood-red);
+            border-left: 5px solid #8B0000;
+        }
+        .gallery-item:hover {
+            border-color: #8B0000;
         }
     </style>
 </head>
 <body>
-    <header class="artist-header-nav">
-        <a href="../index.html">
-            <img src="../images/logo.png" alt="ShadowRealm Records" class="artist-page-logo">
-        </a>
-        <nav>
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" alt="ShadowRealm Logo" class="main-logo"></a>
+        <nav class="main-nav">
             <ul>
-                <li><a href="../index.html#artists">Artists</a></li>
-                <li><a href="../index.html#newsletter">Newsletter</a></li>
-                <li><a href="../index.html#staff">Staff</a></li>
+                <li><a href="../index.html#artists">Shadows</a></li>
+                <li><a href="../index.html#newsletter">Chronicles</a></li>
+                <li><a href="../index.html#staff">Keepers</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="artist-header">
-        <h1>Junebu99</h1>
-    </section>
+    <main>
+        <section class="artist-header"></section>
 
-    <section class="artist-bio">
-        <p>The ghetto author resurrecting 90s lyricism with modern street survival...</p>
-    </section>
+        <section class="terminal-box artist-bio">
+            <h2>The Ghetto Oracle</h2>
+            <p>Emerging from concrete labyrinths where flickering streetlights illuminate forgotten truths, Junebu99 resurrects 90s boom-bap spirituality through a prism of modern urban decay. His gravel-voiced poetics ride crackling vinyl samples and trap hi-hat exorcisms, chronicling street-corner prophecies and corner-store revelations. This self-proclaimed "alleyway archivist" weaves golden-era flow patterns with contemporary desperation, creating time-warped anthems that smell of spray paint and spilled malt liquor. Each track serves as both survival manual and memorial service, preserving hood chronicles in amber while sounding alarms for today's endangered streets.</p>
+            
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-soundcloud"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
 
-    <section class="artist-gallery">
-        <h2>Shadow Archives</h2>
-        <div class="gallery-grid">
-            <!-- Track Card -->
+        <section class="gallery-grid">
             <div class="gallery-item track-card">
-                <div class="track-artwork" style="background-image: url('../images/artists/junebu99-track1.jpg')">
+                <div class="track-artwork" style="background-image: url('https://via.placeholder.com/400x400/1a1a1a/8B0000?text=TRACK+ART')">
                     <div class="play-button">▶</div>
                 </div>
-                <h3>Concrete Psalms</h3>
+                <h3>Graffiti Psalms</h3>
                 <div class="stream-links">
                     <a href="#"><i class="fab fa-spotify"></i></a>
                     <a href="#"><i class="fab fa-apple"></i></a>
-                    <a href="#"><i class="fab fa-soundcloud"></i></a>
                 </div>
             </div>
 
-            <!-- Photo Card -->
             <div class="gallery-item photo-card">
-                <img src="../images/artists/junebu99-photo1.jpg" alt="Studio Session">
+                <img src="https://via.placeholder.com/400x500/1a1a1a/8B0000?text=STREET+SESSION" alt="Recording">
                 <div class="photo-caption">Midnight Studio Rituals</div>
             </div>
-
-            <!-- Social Card -->
-            <div class="gallery-item social-card">
-                <h3>Follow the Shadows</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p>@Junebu99</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
-<link rel="stylesheet" href="../css/style.css">
