@@ -3,78 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junebu99 | ShadowRealm Records</title>
+    <title>Junebu99 - Spirit of the Concrete</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --theme-accent: #8B0000;
-            --theme-gradient: linear-gradient(45deg, #2a0a0a, #1a1a1a);
+            --blood-river: #8B0000;
+            --asphalt: #1a1a1a;
+        }
+        body::before {
+            background: linear-gradient(to bottom, 
+                rgba(34,34,34,0.9) 0%,
+                rgba(13,13,13,0.95) 100%),
+                url('../images/artists/junebu99-runes.png');
         }
     </style>
 </head>
-<body>
-    <header class="artist-header" style="background: var(--theme-gradient), url('../images/artists/junebu99-banner.jpg')">
-        <a href="../index.html" class="back-button">
-            <i class="fas fa-arrow-left"></i> Back to Shadows
+<body class="mythic urban-myth">
+    <nav class="myth-nav">
+        <a href="../index.html" class="obelisk-link">
+            <img src="../images/obelisk.png" alt="Return to Shadows">
         </a>
-        <h1>Junebu99</h1>
-        <p class="artist-tagline">Poet of the Concrete Jungle</p>
-    </header>
+    </nav>
 
-    <section class="artist-bio">
-        <div class="retro-terminal">
-            <div class="terminal-header">
-                <span class="terminal-button red"></span>
-                <span class="terminal-button yellow"></span>
-                <span class="terminal-button green"></span>
-            </div>
-            <p class="typewriter-text">
-                > Loading urban chronicles...<br>
-                Hailing from forgotten alleyways where streetlights flicker like dying stars, 
-                Junebu99 resurrects 90s boom-bap spirituality through cracked smartphone speakers. 
-                His verses - equal parts survival guide and eulogy - ride distorted soul samples 
-                and trap percussion that echoes through housing project corridors. The self-taught 
-                "sidewalk scribe" documents hood realities with the precision of a crime scene investigator, 
-                his flow alternating between gravel-throated warnings and tender neighborhood eulogies. 
-                Recent works feature collaborations with underground producers, blending cassette tape 
-                hiss with blockchain-era paranoia.
+    <main class="stone-tablet">
+        <header class="pantheon-header">
+            <h1 class="glowing-runes">JUNEBU99</h1>
+            <p class="epitaph">The Eternal Street Chronicler</p>
+        </header>
+
+        <section class="mythos-scroll">
+            <div class="ancient-tape"></div>
+            <p class="cuneiform">
+                Born from the collective whispers of abandoned tenements, 
+                Junebu99 manifests as the immortal bard of urban decay. 
+                His verses, etched in subway dust and neon residue, 
+                resurrect forgotten souls through beats forged in 
+                underground furnace. The clatter of his skeletal fingers 
+                on spray cans conducts symphonies of resistance. 
+                Mortals who play his tracks report visions of cities 
+                that never were and streets that remember.
             </p>
-        </div>
-    </section>
+        </section>
 
-    <section class="discography">
-        <h2><i class="fas fa-compact-disc"></i> Street Scriptures</h2>
-        <div class="track-list">
-            <div class="track-card" style="border-left: 4px solid var(--theme-accent)">
-                <h3>Graffiti Psalms (2024)</h3>
-                <div class="stream-links">
-                    <a href="#"><i class="fab fa-spotify"></i></a>
-                    <a href="#"><i class="fab fa-soundcloud"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+        <section class="sacred-relics">
+            <h2>Echoes from the Alley Dimension</h2>
+            <div class="relic-card">
+                <div class="cassette-demo">
+                    <audio controls>
+                        <source src="../demos/junebu99-alleyprophet.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>"Prophet of the D Train" (2024 Ritual)</p>
+                </div>
+                <div class="relic-info">
+                    <h3>Relics of Resistance</h3>
+                    <ul class="hieroglyph-list">
+                        <li>Graffiti Psalms Stone Tablet</li>
+                        <li>Subway Token of Truth</li>
+                    </ul>
                 </div>
             </div>
-            <!-- Add more tracks -->
-        </div>
-    </section>
+        </section>
 
-    <section class="gallery-grid">
-        <div class="photo-card" style="background-image: url('../images/artists/junebu99-studio.jpg')">
-            <div class="photo-caption">Midnight Studio Sessions</div>
+        <div class="sigil-circle">
+            <a href="#" class="sigil instagram-sigil"></a>
+            <a href="#" class="sigil soundcloud-sigil"></a>
         </div>
-        <!-- Add more photos -->
-    </section>
-
-    <section class="social-hub">
-        <h2><i class="fas fa-tower-cell"></i> Street Frequency</h2>
-        <div class="social-links">
-            <a href="#" class="social-button instagram">
-                <i class="fab fa-instagram"></i> Visual Chronicles
-            </a>
-            <a href="#" class="social-button twitter">
-                <i class="fab fa-twitter"></i> Concrete Thoughts
-            </a>
-        </div>
-    </section>
+    </main>
 </body>
 </html>
