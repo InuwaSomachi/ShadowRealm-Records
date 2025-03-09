@@ -295,3 +295,25 @@ nav a:hover::after {
         margin-right: 0;
     }
 }
+/* Add this to fix artist page navigation */
+.artist-nav {
+    position: relative;
+    z-index: 1001;
+}
+
+/* Fix responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add this for proper path resolution */
+.character {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.junebu99 { background-image: url('../images/junebu99-header.jpg'); }
+.medi { background-image: url('../images/medi-header.jpg'); }
+.pkl { background-image: url('../images/pkl-header.jpg'); }
