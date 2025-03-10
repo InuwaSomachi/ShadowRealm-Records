@@ -3,47 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadow Realm Records</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <title>ShadowRealm Records - Mystical Hip-Hop Collective</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="preloader">
-        <div class="shimmer"></div>
-    </div>
-    
-    <nav class="glow-border">
-        <div class="logo">
-            <img src="assets/images/logo.svg" alt="Shadow Realm Logo">
+    <!-- Custom Cursor Elements -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">𝕾𝖍𝖆𝖉𝖔𝖜𝕽𝖊𝖆𝖑𝖒</div>
+            <ul>
+                <li><a href="#artists" class="nav-link">Artists</a></li>
+                <li><a href="#releases" class="nav-link">Releases</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#artists">Shadows</a></li>
-            <li><a href="#about">The Realm</a></li>
-            <li><a href="#contact">Summon</a></li>
-        </ul>
+        <div class="scroll-progress"></div>
     </nav>
 
-    <header class="parallax">
-        <div class="header-content">
-            <h1 class="glitch" data-text="SHADOW REALM">SHADOW REALM</h1>
-            <p>Where Music Meets Mystery</p>
-        </div>
+    <!-- Glitch Header -->
+    <header class="glitch-header">
+        <h1 data-text="ShadowRealm Records">ShadowRealm Records</h1>
+        <p class="subtitle">Where Beats Meet the Beyond</p>
+        <div class="scrolldown-indicator"></div>
     </header>
 
-    <section id="artists" class="shady-grid">
-        <!-- Artist cards with hover effects -->
-        <div class="artist-card" onclick="location.href='artists/junebu9.html'">
-            <div class="card-inner">
-                <div class="card-front" style="background-image: url('assets/images/artists/junebu9.jpg')"></div>
-                <div class="card-back">
-                    <h3>Junebu9</h3>
-                    <p>The Ghetto Author</p>
-                </div>
-            </div>
-        </div>
-        <!-- Repeat for other artists -->
-    </section>
+    <!-- Artist Grid -->
+    <main class="content-wrapper">
+        <section id="artists" class="artist-section">
+            <div class="artist-grid">
+                <!-- Artist Card 1 -->
+                <article class="artist-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="artist1.jpg" alt="Spectre" class="artist-image">
+                            <h3 class="artist-name">Spectre</h3>
+                            <p class="artist-info">Phantom Poet of the Underground</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="artist-bio">Lyrical phantom haunting the city's subconscious...</p>
+                            <button class="reveal-btn">Unveil the Truth</button>
+                        </div>
+                    </div>
+                    <audio class="audio-preview" src="spectre-preview.mp3"></audio>
+                </article>
 
-    <script src="js/script.js"></script>
+                <!-- Add more artist cards following same structure -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Modal -->
+    <div class="modal-overlay">
+        <div class="cryptic-modal">
+            <span class="close-modal">&times;</span>
+            <h3>Enter the Realm</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="your.ritual@email.com" required>
+                <button type="submit" class="submit-btn">Summon Updates</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ocult-footer">
+        <div class="sigil-container">
+            <!-- Add occult-inspired SVG patterns here -->
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-link" data-platform="bandcamp">Bandcamp</a>
+            <a href="#" class="social-link" data-platform="soundcloud">SoundCloud</a>
+            <a href="#" class="social-link" data-platform="instagram">Instagram</a>
+        </div>
+        <p class="copyright">&copy; 2023 ShadowRealm Records. All rites preserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
