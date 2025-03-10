@@ -261,3 +261,73 @@ body::before {
     0% { background-position: 0 0; }
     100% { background-position: 0 100%; }
 }
+/* New Additions */
+.scanline-text {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.scanline-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 255, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    animation: scanline 1s linear infinite;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 50%,
+        rgba(0, 255, 0, 0.05) 100%
+    );
+    mix-blend-mode: soft-light;
+}
+
+.glitch-sm {
+    position: relative;
+}
+
+.glitch-sm::before,
+.glitch-sm::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.glitch-sm::before {
+    color: #ff00ff;
+    animation: glitch-sm 2s infinite linear;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch-sm::after {
+    color: #00ffff;
+    animation: glitch-sm 2s infinite linear reverse;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch-sm {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
