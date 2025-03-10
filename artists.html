@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Shadow - Shadow Realm Records</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/crt-effect.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body class="crt">
+    <nav>
+        <img src="assets/images/logo.png" alt="Shadow Realm Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <section class="fighter-select">
-        <h2 class="title-shadow">Choose Your Shadow</h2>
+        <h2 class="title-shadow glitch" data-text="CHOOSE YOUR SHADOW">CHOOSE YOUR SHADOW</h2>
         <div class="artist-grid">
             <div class="artist-card" onclick="location.href='junebu9.html'">
                 <img src="assets/images/junebu9.jpg" alt="Junebu9">
-                <h3>Junebu9</h3>
+                <h3>JUNEBU9</h3>
                 <p>The Ghetto Author</p>
+                <div class="pixel-corner"></div>
             </div>
-            <!-- Similar cards for other artists -->
+            <div class="artist-card" onclick="location.href='medi.html'">
+                <img src="assets/images/medi.jpg" alt="Medi That Great">
+                <h3>MEDI THAT GREAT</h3>
+                <p>The Grind Philosopher</p>
+                <div class="pixel-corner"></div>
+            </div>
+            <div class="artist-card" onclick="location.href='pkltheshaboy.html'">
+                <img src="assets/images/pkltheshaboy.jpg" alt="pkltheshaboy">
+                <h3>PKLTHESHABOY</h3>
+                <p>The Enigmatic Storyteller</p>
+                <div class="pixel-corner"></div>
+            </div>
         </div>
     </section>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
