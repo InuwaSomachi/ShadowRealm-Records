@@ -4,271 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShadowRealm Records</title>
-    <style>
-        :root {
-            --main-bg: #0a0a0a;
-            --neon-cyan: #00f3ff;
-            --neon-purple: #bc13fe;
-            --text-primary: #e0e0e0;
-        }
-
-        body {
-            background: var(--main-bg);
-            color: var(--text-primary);
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-        }
-
-        /* Global Styles */
-        .artist-card {
-            border: 2px solid var(--neon-purple);
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .artist-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .artist-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(188, 19, 254, 0.2),
-                transparent
-            );
-            transition: 0.5s;
-        }
-
-        .artist-card:hover::before {
-            left: 100%;
-        }
-
-        /* Individual Artist Styles */
-        /* Junebu99 - Ghetto Author */
-        .junebu99 {
-            border-color: #ff6b35;
-            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
-        }
-
-        .junebu99 .artist-title {
-            font-family: 'Old English Text MT', serif;
-            color: #ff6b35;
-            text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Medi That Great - Motivational */
-        .medi-that-great {
-            border-color: #f9c80e;
-            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
-        }
-
-        .medi-that-great .artist-title {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #f9c80e;
-            text-shadow: 0 0 10px rgba(249, 200, 14, 0.4);
-        }
-
-        /* pkltheshaboy - Enigmatic Storyteller */
-        .pkltheshaboy {
-            border-color: var(--neon-cyan);
-            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
-        }
-
-        .pkltheshaboy .artist-title {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--neon-cyan);
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
-        }
-
-        .glitch-text {
-            animation: glitch 2s infinite;
-        }
-
-        @keyframes glitch {
-            0% { text-shadow: 2px 2px var(--neon-purple); }
-            25% { text-shadow: -2px -2px var(--neon-cyan); }
-            50% { text-shadow: 2px -2px var(--neon-purple); }
-            75% { text-shadow: -2px 2px var(--neon-cyan); }
-            100% { text-shadow: 2px 2px var(--neon-purple); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Junebu99 Card -->
-    <div class="artist-card junebu99">
-        <h2 class="artist-title">JUNEBU99</h2>
-        <p class="artist-tag">The Ghetto Author</p>
-        <p class="artist-bio">
-            Street poet laureate weaving raw narratives through razor-sharp lyricism 
-            and haunting melodies. Every verse is a chapter from the concrete chronicles.
-        </p>
-        <div class="signature">✒️ Ink Blood</div>
-    </div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">ShadowRealm</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Medi That Great Card -->
-    <div class="artist-card medi-that-great">
-        <h2 class="artist-title">MEDI THAT GREAT</h2>
-        <p class="artist-tag">The Grind Philosopher</p>
-        <p class="artist-bio">
-            Sonic motivation for the hustle generation. Blue-collar anthems that transform 
-            subway vibrations into triumph mantras. The people's champion of persistence.
-        </p>
-        <div class="signature">⚡ Daily Victory</div>
-    </div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="main-logo">ShadowRealm Records</h1>
+        </div>
+    </section>
 
-    <!-- pkltheshaboy Card -->
-    <div class="artist-card pkltheshaboy">
-        <h2 class="artist-title glitch-text">PKLTHESHABOY</h2>
-        <p class="artist-tag">The Cryptic Chronicler</p>
-        <p class="artist-bio">
-            Architect of an unfolding audio mystery. Each track contains encrypted pieces 
-            of a puzzle that will reveal... something. The truth is somewhere in the static.
-        </p>
-        <div class="signature">🔐 [REDACTED]</div>
-    </div>
+    <section class="featured-releases" id="releases">
+        <div class="container">
+            <h2>Featured Releases</h2>
+            <div class="releases-grid">
+                <div class="release-card">
+                    <img src="https://via.placeholder.com/300x300" alt="Album Art">
+                    <h3>Nightfall</h3>
+                    <p>Artist: Midnight Phantom</p>
+                    <button class="btn">Listen Now</button>
+                </div>
+                <!-- Add more release cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 ShadowRealm Records. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<style>
-    /* Additional Animations */
-    @keyframes vinyl-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-
-    @keyframes neon-pulse {
-        0% { opacity: 0.8; }
-        50% { opacity: 0.4; }
-        100% { opacity: 0.8; }
-    }
-
-    /* Graffiti Logo */
-    .header-logo {
-        font-family: 'Graduate', cursive;
-        font-size: 4rem;
-        text-align: center;
-        text-shadow: 3px 3px 0px var(--neon-purple);
-        animation: neon-pulse 2s infinite;
-        position: relative;
-    }
-
-    .header-logo::after {
-        content: '✢';
-        position: absolute;
-        right: -30px;
-        top: -15px;
-        font-size: 2rem;
-        animation: neon-pulse 1.5s infinite reverse;
-    }
-
-    /* Vinyl Animation */
-    .vinyl {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: radial-gradient(circle, #222 30%, #000 70%);
-        margin: 20px auto;
-        position: relative;
-        animation: vinyl-spin 4s linear infinite;
-    }
-
-    .vinyl::before {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: var(--neon-cyan);
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* Parallax Effect */
-    .parallax-layer {
-        transition: transform 0.4s ease-out;
-    }
-
-    /* Easter Egg Styling */
-    .easter-egg {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-family: 'Press Start 2P', cursive;
-        color: var(--neon-cyan);
-        font-size: 0.8rem;
-    }
-</style>
-
-<!-- Add this before closing </body> -->
-<script>
-    // Parallax Effect
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.parallax-layer').forEach(layer => {
-            const speed = parseFloat(layer.dataset.speed);
-            const yPos = -(window.pageYOffset * speed);
-            layer.style.transform = `translateY(${yPos}px)`;
-        });
-    });
-
-    // Audio Preview on Hover
-    document.querySelectorAll('.artist-card').forEach(card => {
-        const audio = new Audio('your-audio-file.mp3'); // Replace with actual file
-        
-        card.addEventListener('mouseenter', () => {
-            audio.play();
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            audio.pause();
-            audio.currentTime = 0;
-        });
-    });
-
-    // Easter Egg (Konami Code)
-    let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    let konamiIndex = 0;
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === konamiCode[konamiIndex]) {
-            konamiIndex++;
-            if (konamiIndex === konamiCode.length) {
-                document.querySelector('.easter-egg').style.display = 'block';
-                setTimeout(() => {
-                    document.querySelector('.easter-egg').style.display = 'none';
-                }, 5000);
-                konamiIndex = 0;
-            }
-        } else {
-            konamiIndex = 0;
-        }
-    });
-
-    // Initialize Vinyl Crackle Audio
-    window.addEventListener('click', () => {
-        const vinylAudio = new Audio('vinyl-crackle.mp3');
-        vinylAudio.play();
-    }, { once: true });
-</script>
-
-<!-- Add these elements to your body -->
-<div class="header-logo parallax-layer" data-speed="0.3">
-    SHADOWREALM RECORDS
-</div>
-
-<div class="vinyl parallax-layer" data-speed="0.5"></div>
-
-<div class="easter-egg">
-    SYSTEM ERROR: TRUTH_ARCHIVE_3981 CORRUPTED
-</div>
