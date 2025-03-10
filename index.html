@@ -139,3 +139,136 @@
     </div>
 </body>
 </html>
+<style>
+    /* Additional Animations */
+    @keyframes vinyl-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes neon-pulse {
+        0% { opacity: 0.8; }
+        50% { opacity: 0.4; }
+        100% { opacity: 0.8; }
+    }
+
+    /* Graffiti Logo */
+    .header-logo {
+        font-family: 'Graduate', cursive;
+        font-size: 4rem;
+        text-align: center;
+        text-shadow: 3px 3px 0px var(--neon-purple);
+        animation: neon-pulse 2s infinite;
+        position: relative;
+    }
+
+    .header-logo::after {
+        content: '✢';
+        position: absolute;
+        right: -30px;
+        top: -15px;
+        font-size: 2rem;
+        animation: neon-pulse 1.5s infinite reverse;
+    }
+
+    /* Vinyl Animation */
+    .vinyl {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #222 30%, #000 70%);
+        margin: 20px auto;
+        position: relative;
+        animation: vinyl-spin 4s linear infinite;
+    }
+
+    .vinyl::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: var(--neon-cyan);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Parallax Effect */
+    .parallax-layer {
+        transition: transform 0.4s ease-out;
+    }
+
+    /* Easter Egg Styling */
+    .easter-egg {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-family: 'Press Start 2P', cursive;
+        color: var(--neon-cyan);
+        font-size: 0.8rem;
+    }
+</style>
+
+<!-- Add this before closing </body> -->
+<script>
+    // Parallax Effect
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.parallax-layer').forEach(layer => {
+            const speed = parseFloat(layer.dataset.speed);
+            const yPos = -(window.pageYOffset * speed);
+            layer.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+
+    // Audio Preview on Hover
+    document.querySelectorAll('.artist-card').forEach(card => {
+        const audio = new Audio('your-audio-file.mp3'); // Replace with actual file
+        
+        card.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    });
+
+    // Easter Egg (Konami Code)
+    let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let konamiIndex = 0;
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                document.querySelector('.easter-egg').style.display = 'block';
+                setTimeout(() => {
+                    document.querySelector('.easter-egg').style.display = 'none';
+                }, 5000);
+                konamiIndex = 0;
+            }
+        } else {
+            konamiIndex = 0;
+        }
+    });
+
+    // Initialize Vinyl Crackle Audio
+    window.addEventListener('click', () => {
+        const vinylAudio = new Audio('vinyl-crackle.mp3');
+        vinylAudio.play();
+    }, { once: true });
+</script>
+
+<!-- Add these elements to your body -->
+<div class="header-logo parallax-layer" data-speed="0.3">
+    SHADOWREALM RECORDS
+</div>
+
+<div class="vinyl parallax-layer" data-speed="0.5"></div>
+
+<div class="easter-egg">
+    SYSTEM ERROR: TRUTH_ARCHIVE_3981 CORRUPTED
+</div>
