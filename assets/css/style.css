@@ -1,0 +1,123 @@
+:root {
+    --primary: #00ff00;
+    --secondary: #2a2a2a;
+    --background: #0a0a0a;
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+    animation: glitch 1s infinite;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.artist-card {
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.artist-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--primary);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    color: var(--primary);
+    animation: pulse 2s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0 0 10px var(--primary); }
+    50% { text-shadow: -5px 5px 15px var(--primary); }
+    100% { text-shadow: 0 0 10px var(--primary); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.8; }
+}
+
+/* Artist Page Styles */
+.artist-page {
+    padding: 2rem;
+}
+
+.bio {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.social-link {
+    color: var(--primary);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary);
+    color: var(--background);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid var(--primary);
+}
