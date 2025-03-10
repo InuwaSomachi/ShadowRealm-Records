@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle artist card clicks
     document.querySelectorAll('.artist-card').forEach(card => {
         card.addEventListener('click', () => {
-            const artist = card.dataset.artist;
-            window.location.href = `artists/${artist}.html`;
-        });
+        const artist = card.dataset.artist;
+        window.location.href = `artists/${artist}.html`; // Add directory reference
     });
 
     // Add hover effect
