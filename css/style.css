@@ -1,230 +1,125 @@
-/* ===== ShadowRealm Records - Dark Theme CSS ===== */
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&family=Audiowide&display=swap');
+
 :root {
-    --obsidian: #0a0a0a;
-    --smoke: #1a1a1a;
-    --ember: #2b2b2b;
-    --neon-green: #00ff88;
-    --neon-purple: #8a2be2;
-    --text-primary: #e0e0e0;
-    --text-secondary: #909090;
-}
-
-/* ===== Base Styles ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  --blood-red: #8A0303;
+  --neon-purple: #6C00FF;
+  --shadow-black: #0A0A0A;
+  --concrete: #7D7D7D;
+  --smoke-white: #F1F1F1;
 }
 
 body {
-    background: linear-gradient(45deg, var(--obsidian), var(--smoke));
-    color: var(--text-primary);
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+  background-color: var(--shadow-black);
+  color: var(--smoke-white);
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.6;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* ===== Navigation ===== */
 .navbar {
-    background-color: rgba(10, 10, 10, 0.98) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 10, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--blood-red);
 }
 
-.nav-link {
-    color: var(--text-primary) !important;
-    position: relative;
-    margin: 0 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.navbar-brand {
+  font-family: 'Audiowide', cursive;
+  color: var(--smoke-white) !important;
+  text-shadow: 0 0 10px var(--neon-purple);
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--neon-green);
-    transition: width 0.3s ease;
+.hero-section {
+  height: 80vh;
+  background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), 
+              url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1920') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.hero-section h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 0 var(--blood-red);
 }
 
-/* ===== Hero Section ===== */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at center, 
-        rgba(42, 42, 42, 0.4) 0%,
-        rgba(10, 10, 10, 0.9) 70%);
-    position: relative;
-    overflow: hidden;
+.artist-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--concrete);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg,
-        transparent 45%,
-        rgba(0, 255, 136, 0.1) 50%,
-        transparent 55%);
-    animation: pulse 8s infinite linear;
+.artist-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--neon-purple);
 }
 
-@keyframes pulse {
-    0% { transform: rotate(0deg) translateX(-50%); }
-    100% { transform: rotate(360deg) translateX(-50%); }
+.btn-cta {
+  background: var(--blood-red);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
-/* ===== Shadow Cards ===== */
-.shadow-card {
-    background: rgba(30, 30, 30, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 1rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+.btn-cta:hover {
+  background: transparent;
+  border-color: var(--blood-red);
+  color: var(--blood-red);
+  box-shadow: 0 0 15px var(--blood-red);
 }
 
-.shadow-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent);
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
-}
-
-.shadow-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-}
-
-.shadow-card:hover::before {
-    top: 50%;
-    left: 50%;
-}
-
-/* ===== Typography ===== */
-h1, h2, h3 {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.text-gradient {
-    background: linear-gradient(45deg, var(--neon-green), var(--neon-purple));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-/* ===== Buttons ===== */
-.btn-realm {
-    background: linear-gradient(45deg, var(--ember), var(--smoke));
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    color: var(--text-primary);
-    padding: 12px 28px;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-.btn-realm::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(0, 255, 136, 0.2),
-        transparent
-    );
-    transition: 0.5s;
-}
-
-.btn-realm:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
-    transform: translateY(-2px);
-}
-
-.btn-realm:hover::before {
-    left: 100%;
-}
-
-/* ===== Grid System ===== */
-.shadow-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-/* ===== Image Effects ===== */
-.img-hover {
-    border-radius: 8px;
-    transition: all 0.4s ease;
-    filter: grayscale(20%) contrast(110%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.img-hover:hover {
-    filter: grayscale(0) contrast(120%);
-    transform: scale(1.03);
-}
-
-/* ===== Footer ===== */
 .footer {
-    background: rgba(10, 10, 10, 0.95);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    padding: 2rem 0;
-    margin-top: 4rem;
+  background: #000;
+  padding: 3rem 0;
+  margin-top: 5rem;
+  border-top: 1px solid var(--concrete);
 }
 
-/* ===== Media Queries ===== */
+.music-player {
+  background: rgba(0,0,0,0.9);
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid var(--blood-red);
+}
+
+/* Equalizer Animation */
+.equalizer {
+  display: flex;
+  gap: 2px;
+  height: 30px;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 4px;
+  background: var(--blood-red);
+  animation: equalize 0.8s infinite alternate;
+}
+
+@keyframes equalize {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        height: 80vh;
-        padding: 0 1rem;
-    }
-    
-    .shadow-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .nav-link {
-        margin: 0.5rem 0;
-    }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
 }
-
-/* ===== Utility Classes ===== */
-.spacing-xl { padding: 4rem 0; }
-.spacing-lg { padding: 3rem 0; }
-.spacing-md { padding: 2rem 0; }
-.text-center { text-align: center; }
-.text-uppercase { text-transform: uppercase; }
