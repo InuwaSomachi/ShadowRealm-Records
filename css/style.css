@@ -70,3 +70,47 @@ body {
 .btn-street:hover:before {
   left: 100%;
 }
+/* VHS Effect */
+.vhs-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.15) 0px,
+    rgba(0,0,0,0.15) 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Mixtape Player */
+.mixtape-player {
+  background: var(--street-gray);
+  border: 3px solid var(--neon-purple);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+}
+
+.vinyl {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle, #111 60%, #000 100%),
+    repeating-radial-gradient(circle at 30% 30%, 
+      var(--neon-purple) 0%, 
+      var(--blood-red) 10%,
+      transparent 20%
+    );
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
