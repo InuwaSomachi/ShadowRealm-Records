@@ -1,0 +1,48 @@
+:root {
+    --shadow-green: #00ff88;
+    --dark-bg: #0a0a0a;
+    --crt-flicker: rgba(0, 255, 136, 0.1);
+}
+
+body {
+    background: var(--dark-bg);
+    color: white;
+    font-family: 'PixelFont', monospace;
+}
+
+.crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, var(--crt-flicker), var(--crt-flicker));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.artist-card {
+    background: #111;
+    border: 2px solid var(--shadow-green);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--shadow-green);
+    cursor: pointer;
+}
+
+.glitch {
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    2% { text-shadow: 2px 0 red; }
+    4% { text-shadow: -2px 0 blue; }
+    96% { text-shadow: 2px 0 red; }
+    98% { text-shadow: -2px 0 blue; }
+}
