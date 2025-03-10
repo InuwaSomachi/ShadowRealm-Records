@@ -14,11 +14,9 @@
 }
 
 body {
-    background: var(--shadow-primary);
-    color: var(--text-primary);
-    font-family: 'Courier New', monospace;
-    line-height: 1.6;
-    padding-top: 80px;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* === Header Fix === */
@@ -89,4 +87,56 @@ header {
 
 .social-links a:hover {
     color: var(--neon-accent);
+}
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    padding: 4rem 0;
+    background: rgba(20, 20, 20, 0.85);
+    margin: 2rem 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.shadow-card {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(40, 40, 40, 0.95);
+}
+
+.btn-cta {
+    background: linear-gradient(45deg, #2b2b2b, #4a4a4a);
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: linear-gradient(45deg, #4a4a4a, #2b2b2b);
+    transform: scale(1.05);
+}
+
+/* Add this for image hover effects */
+.img-hover {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.img-hover:hover {
+    transform: scale(1.03);
+    filter: grayscale(0);
 }
