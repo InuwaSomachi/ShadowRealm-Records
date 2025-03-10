@@ -3,109 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShadowRealm Records</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&family=Audiowide&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Shadow Realm Records</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="noise-overlay"></div>
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">SHADOWREALM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#artists">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#releases">Releases</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="sidebar">
+        <div class="nav-container">
+            <div class="logo" data-text="SHADOW_REALM">SHADOW_REALM</div>
+            <ul class="nav-links">
+                <li><a href="#"><span class="icon">👁️</span>Artists</a></li>
+                <li><a href="#"><span class="icon">⚰️</span>Manifesto</a></li>
+                <li><a href="#"><span class="icon">🔮</span>Story</a></li>
+                <li><a href="#"><span class="icon">🩸</span>Releases</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero bg-void">
-  <div class="vhs-overlay"></div>
-  <div class="container">
-    <h1 class="glitch" data-text="SHADOWREALM">SHADOWREALM</h1>
-    <p class="lead">Underground Sound Syndicate</p>
-    <button class="btn-street mt-4">Join the Movement</button>
-  </div>
-</section>
+    <section class="hero">
+        <video autoplay muted loop class="bg-video">
+            <source src="assets/videos/bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="WHERE SHADOWS SPEAK">WHERE SHADOWS SPEAK</h1>
+        </div>
+    </section>
 
-    <!-- Featured Artists -->
-    <section id="artists" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">OUR LEGION</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="artist-card p-4">
-                        <h3>VOID WALKER</h3>
-                        <p>Experimental Trap Architect</p>
-                        <div class="equalizer">
-                            <div class="bar" style="animation-delay: 0s"></div>
-                            <div class="bar" style="animation-delay: 0.2s"></div>
-                            <div class="bar" style="animation-delay: 0.4s"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more artist cards -->
-            </div>
+    <!-- Artists Section -->
+    <section class="artists">
+        <div class="artist-card" data-artist="junebu9">
+            <h3>JUNEBU9</h3>
+            <p>The Ghetto Author</p>
+            <div class="graffiti-overlay"></div>
+        </div>
+        
+        <div class="artist-card" data-artist="medi">
+            <h3>MEDI THAT GREAT</h3>
+            <p>The Grind Philosopher</p>
+            <div class="sun-overlay"></div>
+        </div>
+        
+        <div class="artist-card" data-artist="pkltheshaboy">
+            <h3>pkltheshaboy</h3>
+            <p>Enigma</p>
+            <div class="cipher-overlay"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <div class="social-links mb-4">
-                <a href="#" class="text-white mx-3"><i class="fab fa-soundcloud"></i></a>
-                <a href="#" class="text-white mx-3"><i class="fab fa-spotify"></i></a>
-                <a href="#" class="text-white mx-3"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; 2023 ShadowRealm Records. All rights reserved.</p>
+    <footer class="shadow-footer">
+        <div class="social-links">
+            <!-- Add social media icons -->
         </div>
+        <p class="warning-text">Beware - All who enter become shadows</p>
     </footer>
 
-    <!-- Music Player -->
-    <div class="music-player">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <span>NOW PLAYING: Shadow Realm Anthem - Various Artists</span>
-                <div class="equalizer">
-                    <div class="bar" style="animation-delay: 0s"></div>
-                    <div class="bar" style="animation-delay: 0.2s"></div>
-                    <div class="bar" style="animation-delay: 0.4s"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
-<!-- Mixtape Section -->
-<section class="mixtape-section py-5">
-  <div class="container">
-    <h2 class="text-center mb-5 neon-underline">Latest Drops</h2>
-    <div class="mixtape-player">
-      <div class="vinyl"></div>
-      <div class="tracklist">
-        <div class="track active">1. Midnight Cypher - Void Walker</div>
-        <div class="track">2. Neon Dreams - Spectre</div>
-        <div class="track">3. Concrete Jungle - Razor Tongue</div>
-      </div>
-    </div>
-  </div>
-</section>
