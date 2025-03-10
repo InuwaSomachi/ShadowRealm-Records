@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
+    // Scroll effect for main logo
+    const mainLogo = document.querySelector('.main-logo');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        mainLogo.style.transform = `scale(${1 + scrolled * 0.0005})`;
     });
 
-    document.querySelectorAll('.animate-on-scroll').forEach((element) => {
-        observer.observe(element);
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
