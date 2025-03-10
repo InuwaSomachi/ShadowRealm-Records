@@ -3,85 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShadowRealm Records - Mystical Hip-Hop Collective</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>ShadowRealm Records</title>
+    <style>
+        :root {
+            --main-bg: #0a0a0a;
+            --neon-cyan: #00f3ff;
+            --neon-purple: #bc13fe;
+            --text-primary: #e0e0e0;
+        }
+
+        body {
+            background: var(--main-bg);
+            color: var(--text-primary);
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        /* Global Styles */
+        .artist-card {
+            border: 2px solid var(--neon-purple);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .artist-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(188, 19, 254, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .artist-card:hover::before {
+            left: 100%;
+        }
+
+        /* Individual Artist Styles */
+        /* Junebu99 - Ghetto Author */
+        .junebu99 {
+            border-color: #ff6b35;
+            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
+        }
+
+        .junebu99 .artist-title {
+            font-family: 'Old English Text MT', serif;
+            color: #ff6b35;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Medi That Great - Motivational */
+        .medi-that-great {
+            border-color: #f9c80e;
+            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
+        }
+
+        .medi-that-great .artist-title {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #f9c80e;
+            text-shadow: 0 0 10px rgba(249, 200, 14, 0.4);
+        }
+
+        /* pkltheshaboy - Enigmatic Storyteller */
+        .pkltheshaboy {
+            border-color: var(--neon-cyan);
+            background: linear-gradient(45deg, #2a2a2a 0%, #0a0a0a 100%);
+        }
+
+        .pkltheshaboy .artist-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+        }
+
+        .glitch-text {
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px var(--neon-purple); }
+            25% { text-shadow: -2px -2px var(--neon-cyan); }
+            50% { text-shadow: 2px -2px var(--neon-purple); }
+            75% { text-shadow: -2px 2px var(--neon-cyan); }
+            100% { text-shadow: 2px 2px var(--neon-purple); }
+        }
+    </style>
 </head>
 <body>
-    <!-- Custom Cursor Elements -->
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Navigation -->
-    <nav class="sticky-nav">
-        <div class="nav-container">
-            <div class="nav-logo">𝕾𝖍𝖆𝖉𝖔𝖜𝕽𝖊𝖆𝖑𝖒</div>
-            <ul>
-                <li><a href="#artists" class="nav-link">Artists</a></li>
-                <li><a href="#releases" class="nav-link">Releases</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-        <div class="scroll-progress"></div>
-    </nav>
-
-    <!-- Glitch Header -->
-    <header class="glitch-header">
-        <h1 data-text="ShadowRealm Records">ShadowRealm Records</h1>
-        <p class="subtitle">Where Beats Meet the Beyond</p>
-        <div class="scrolldown-indicator"></div>
-    </header>
-
-    <!-- Artist Grid -->
-    <main class="content-wrapper">
-        <section id="artists" class="artist-section">
-            <div class="artist-grid">
-                <!-- Artist Card 1 -->
-                <article class="artist-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="artist1.jpg" alt="Spectre" class="artist-image">
-                            <h3 class="artist-name">Spectre</h3>
-                            <p class="artist-info">Phantom Poet of the Underground</p>
-                        </div>
-                        <div class="card-back">
-                            <p class="artist-bio">Lyrical phantom haunting the city's subconscious...</p>
-                            <button class="reveal-btn">Unveil the Truth</button>
-                        </div>
-                    </div>
-                    <audio class="audio-preview" src="spectre-preview.mp3"></audio>
-                </article>
-
-                <!-- Add more artist cards following same structure -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Newsletter Modal -->
-    <div class="modal-overlay">
-        <div class="cryptic-modal">
-            <span class="close-modal">&times;</span>
-            <h3>Enter the Realm</h3>
-            <form class="newsletter-form">
-                <input type="email" placeholder="your.ritual@email.com" required>
-                <button type="submit" class="submit-btn">Summon Updates</button>
-            </form>
-        </div>
+    <!-- Junebu99 Card -->
+    <div class="artist-card junebu99">
+        <h2 class="artist-title">JUNEBU99</h2>
+        <p class="artist-tag">The Ghetto Author</p>
+        <p class="artist-bio">
+            Street poet laureate weaving raw narratives through razor-sharp lyricism 
+            and haunting melodies. Every verse is a chapter from the concrete chronicles.
+        </p>
+        <div class="signature">✒️ Ink Blood</div>
     </div>
 
-    <!-- Footer -->
-    <footer class="ocult-footer">
-        <div class="sigil-container">
-            <!-- Add occult-inspired SVG patterns here -->
-        </div>
-        <div class="social-links">
-            <a href="#" class="social-link" data-platform="bandcamp">Bandcamp</a>
-            <a href="#" class="social-link" data-platform="soundcloud">SoundCloud</a>
-            <a href="#" class="social-link" data-platform="instagram">Instagram</a>
-        </div>
-        <p class="copyright">&copy; 2023 ShadowRealm Records. All rites preserved.</p>
-    </footer>
+    <!-- Medi That Great Card -->
+    <div class="artist-card medi-that-great">
+        <h2 class="artist-title">MEDI THAT GREAT</h2>
+        <p class="artist-tag">The Grind Philosopher</p>
+        <p class="artist-bio">
+            Sonic motivation for the hustle generation. Blue-collar anthems that transform 
+            subway vibrations into triumph mantras. The people's champion of persistence.
+        </p>
+        <div class="signature">⚡ Daily Victory</div>
+    </div>
 
-    <script src="app.js"></script>
+    <!-- pkltheshaboy Card -->
+    <div class="artist-card pkltheshaboy">
+        <h2 class="artist-title glitch-text">PKLTHESHABOY</h2>
+        <p class="artist-tag">The Cryptic Chronicler</p>
+        <p class="artist-bio">
+            Architect of an unfolding audio mystery. Each track contains encrypted pieces 
+            of a puzzle that will reveal... something. The truth is somewhere in the static.
+        </p>
+        <div class="signature">🔐 [REDACTED]</div>
+    </div>
 </body>
 </html>
