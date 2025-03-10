@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="noise-overlay"></div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -34,13 +36,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-1 mb-4">DARKNESS MANIFESTED</h1>
-            <p class="lead mb-4">Where Shadows Meet Sound</p>
-            <button class="btn-cta">Enter the Realm</button>
-        </div>
-    </section>
+    <section class="hero bg-void">
+  <div class="vhs-overlay"></div>
+  <div class="container">
+    <h1 class="glitch" data-text="SHADOWREALM">SHADOWREALM</h1>
+    <p class="lead">Underground Sound Syndicate</p>
+    <button class="btn-street mt-4">Join the Movement</button>
+  </div>
+</section>
 
     <!-- Featured Artists -->
     <section id="artists" class="py-5">
@@ -92,3 +95,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<!-- Mixtape Section -->
+<section class="mixtape-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 neon-underline">Latest Drops</h2>
+    <div class="mixtape-player">
+      <div class="vinyl"></div>
+      <div class="tracklist">
+        <div class="track active">1. Midnight Cypher - Void Walker</div>
+        <div class="track">2. Neon Dreams - Spectre</div>
+        <div class="track">3. Concrete Jungle - Razor Tongue</div>
+      </div>
+    </div>
+  </div>
+</section>
