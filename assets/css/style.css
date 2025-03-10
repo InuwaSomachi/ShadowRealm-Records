@@ -331,3 +331,115 @@ body::before {
     80% { transform: translate(2px, -2px); }
     100% { transform: translate(0); }
 }
+/* Artist Page Specific Styles */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: var(--primary);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    z-index: 1000;
+}
+
+.bio-box {
+    position: relative;
+    border: 3px solid var(--primary);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.bio-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 0 0 5px var(--primary);
+}
+
+.section-title {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--primary);
+    text-align: center;
+    margin: 3rem 0 1rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px var(--primary);
+}
+
+.music-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.music-link {
+    color: var(--primary);
+    text-decoration: none;
+    border: 2px solid var(--primary);
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.music-link:hover {
+    background: var(--primary);
+    color: var(--background);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.gallery-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.social-item {
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.social-item:hover {
+    background: rgba(0, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
