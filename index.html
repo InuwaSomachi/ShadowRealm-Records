@@ -8,36 +8,42 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <nav class="sticky-nav">
+    <div class="preloader">
+        <div class="shimmer"></div>
+    </div>
+    
+    <nav class="glow-border">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Shadow Realm Logo">
+            <img src="assets/images/logo.svg" alt="Shadow Realm Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#home" class="glow-link">Home</a></li>
-            <li><a href="artists.html" class="glow-link">Artists</a></li>
-            <li><a href="#contact" class="glow-link">Contact</a></li>
+            <li><a href="#artists">Shadows</a></li>
+            <li><a href="#about">The Realm</a></li>
+            <li><a href="#contact">Summon</a></li>
         </ul>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="fade-in">Enter the Realm</h1>
-            <p class="slide-up">Where Shadows Create Sound</p>
+    <header class="parallax">
+        <div class="header-content">
+            <h1 class="glitch" data-text="SHADOW REALM">SHADOW REALM</h1>
+            <p>Where Music Meets Mystery</p>
         </div>
-    </section>
+    </header>
 
-    <section class="artists-preview">
-        <h2 class="section-title">The Collective</h2>
-        <div class="artist-grid">
-            <!-- Repeat for each artist -->
-            <div class="artist-card hover-glow">
-                <img src="assets/images/junebu9.jpg" alt="Junebu9">
-                <h3>Junebu9</h3>
-                <p>The Ghetto Author</p>
+    <section id="artists" class="shady-grid">
+        <!-- Artist cards with hover effects -->
+        <div class="artist-card" onclick="location.href='artists/junebu9.html'">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url('assets/images/artists/junebu9.jpg')"></div>
+                <div class="card-back">
+                    <h3>Junebu9</h3>
+                    <p>The Ghetto Author</p>
+                </div>
             </div>
         </div>
+        <!-- Repeat for other artists -->
     </section>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
