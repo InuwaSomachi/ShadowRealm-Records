@@ -443,3 +443,56 @@ body::before {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
+/* Add these modifications at the end of your CSS file */
+
+/* Consistent Card Sizing */
+.artist-card {
+    height: 500px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-img-container {
+    height: 300px; /* Maintain image container height */
+    flex-shrink: 0; /* Prevent image area from shrinking */
+}
+
+/* Grid Layout Adjustments */
+.grid-container {
+    grid-template-areas:
+        "medi medi"
+        "d6 breezy"
+        "king-mike king-mike";
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "medi"
+            "d6"
+            "breezy"
+            "king-mike";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Assign grid areas */
+#medi { grid-area: medi; }
+#d6 { grid-area: d6; }
+#breezy { grid-area: breezy; }
+#king-mike { grid-area: king-mike; }
+
+/* Full-width top and bottom cards */
+#medi,
+#king-mike {
+    grid-column: 1 / -1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Card Content Alignment */
+.artist-card {
+    justify-content: space-between;
+}
