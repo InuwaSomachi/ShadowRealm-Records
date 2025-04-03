@@ -110,3 +110,39 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+/* Add these new rules at the BOTTOM of your existing CSS file */
+
+/* Ensure consistent card sizing */
+.artist-card {
+  width: 280px !important; /* Forces equal width */
+  height: 450px !important; /* Fixed height */
+  margin: 10px !important; 
+}
+
+/* Image sizing fix */
+.artist-card img {
+  height: 300px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Grid layout adjustment */
+.artist-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem !important;
+  padding: 20px !important;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .artist-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .artist-card {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 10px auto !important;
+  }
+}
