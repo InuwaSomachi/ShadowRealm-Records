@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadow Realm Records | Flucci</title>
-    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@500&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <title>SHADOW REALM RECORDS | FLUCCI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <style>
-        /* Maintain same CSS as original template */
+        :root {
+            --glow: #0f0;
+            --bg: #000;
+        }
+
         body {
             margin: 0;
             padding: 20px;
-            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
-            color: #00ff9d;
-            font-family: 'Electrolize', sans-serif;
+            background-color: var(--bg);
+            color: var(--glow);
+            font-family: 'Ubuntu Mono', monospace;
+            overflow-x: hidden;
         }
 
         .grid-container {
@@ -21,81 +26,111 @@
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         .grid-item {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border: 1px solid #00ff9d;
-            border-radius: 5px;
+            background: rgba(0, 30, 0, 0.1);
+            border: 1px solid var(--glow);
+            padding: 15px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
         }
 
-        .artist-image {
+        #name {
+            grid-column: 1 / -1;
+            text-align: center;
+            border: none;
+            background: none;
+        }
+
+        .pixel {
+            font-family: 'Silkscreen', cursive;
+            text-shadow: 0 0 10px var(--glow);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
             width: 100%;
             height: auto;
-            border-radius: 5px;
+            filter: grayscale(100%) contrast(120%);
+            transition: filter 0.3s;
         }
 
-        .artist-name {
-            font-family: 'Orbitron', sans-serif;
-            color: #00ff9d;
-            text-shadow: 0 0 10px #00ff9d;
+        .image-container:hover img {
+            filter: grayscale(50%) contrast(150%);
         }
 
-        .social-links a {
-            color: #00ff9d;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
+        .scanline {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                transparent 50%,
+                rgba(0, 255, 0, 0.05) 51%,
+                transparent 51%);
+            pointer-events: none;
         }
 
-        .social-links a:hover {
-            text-shadow: 0 0 10px #00ff9d;
+        .glitch-text {
+            animation: glitch 1s infinite linear;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header a {
-            color: #00ff9d;
-            text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px var(--glow); }
+            50% { text-shadow: -2px 0 5px #f00, 2px 0 5px #0ff; }
+            100% { text-shadow: 0 0 10px var(--glow); }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="/ShadowRealm-Records">SHADOW REALM RECORDS</a>
-    </div>
-
     <div class="grid-container">
-        <div class="grid-item">
-            <h1 class="artist-name">FLUCCI</h1>
-            <h3>Creative Director</h3>
-            <p>■■■■■■■■■■■■■■■■■</p>
+        <div class="grid-item" id="name">
+            <h1 class="pixel glitch-text">// FLUCCI_ARCANA.EXE</h1>
+            <h3 class="pixel">CREATIVE_DIRECTOR</h3>
+        </div>
+
+        <div class="grid-item image-container">
+            <div class="scanline"></div>
+            <img src="/ShadowRealm-Records/images/flucci.jpg" alt="Flucci Visual Interface">
         </div>
 
         <div class="grid-item">
-            <img src="https://inuwasomachi.github.io/ShadowRealm-Records/images/flucci.jpg" alt="Flucci" class="artist-image">
+            <h2 class="pixel">> BIOGRAPHY_ARCHIVE</h2>
+            <p>[REDACTED] OPERATIVE: FLUCCI</p>
+            <p>PRIMARY FUNCTION: VISUAL COGNITION SYSTEMS</p>
+            <p>SPECIALIZATION: OCCULT SEMIOTICS/NEURAL AESTHETICS</p>
+            <p class="glitch-text">WARNING: BIOGRAPHICAL DATA CORRUPTED</p>
         </div>
 
         <div class="grid-item">
-            <h2>Biography</h2>
-            <p>The enigmatic visionary known only as Flucci orchestrates the visual and conceptual identity of Shadow Realm Records. With a background shrouded in mystery, their work blends occult symbolism with cutting-edge digital aesthetics, creating the label's signature dark cyberpunk visual language.</p>
-            <p>Flucci's creative direction extends beyond mere artwork - each release contains hidden narratives and arcane patterns that dedicated followers claim reveal prophetic messages when decoded.</p>
-        </div>
-
-        <div class="grid-item">
-            <h2>Connections</h2>
-            <div class="social-links">
-                <a href="#">■■■■■■■@shadowrealm.co</a>
-                <a href="https://twitter.com/flucci_arcana">TWITTER</a>
-                <a href="https://www.instagram.com/flucci_arcana">INSTAGRAM</a>
-                <a href="#">■■■■■■■■■■.io</a>
+            <h2 class="pixel">> CONTACT_PROTOCOLS</h2>
+            <div class="pixel">
+                <p>ENCRYPTED_MAIL: ███████@shadow.net</p>
+                <p>TWITTER: <a href="#" class="glitch-text">@FLUCCI_TERMINAL</a></p>
+                <p>INSTAGRAM: <a href="#" class="glitch-text">@FLUCCI_OVERRIDE</a></p>
+                <p>PORTAL: <span class="glitch-text">████████.onion</span></p>
             </div>
         </div>
     </div>
+
+    <script>
+        // Original template's glitch effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const glitchElements = document.querySelectorAll('.glitch-text');
+            setInterval(() => {
+                glitchElements.forEach(element => {
+                    element.style.textShadow = `
+                        ${Math.random() * 5 - 2}px ${Math.random() * 5 - 2}px 0 rgba(255,0,0,0.7),
+                        ${Math.random() * 5 - 2}px ${Math.random() * 5 - 2}px 0 rgba(0,255,255,0.7)
+                    `;
+                });
+            }, 50);
+        });
+    </script>
 </body>
 </html>
