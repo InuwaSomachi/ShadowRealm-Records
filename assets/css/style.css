@@ -496,3 +496,32 @@ body::before {
 .artist-card {
     justify-content: space-between;
 }
+/* Ensure all artist cards maintain exact dimensions */
+.artist-card {
+    width: 100% !important;
+    height: 500px !important;
+    min-height: 500px;
+}
+
+/* Strict image container constraints */
+.artist-img-container {
+    height: 300px !important;
+    min-height: 300px;
+    max-height: 300px;
+}
+
+/* Force grid columns to equal width */
+.grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Specific Breezy card fixes */
+#breezy.artist-card {
+    transform: translateZ(0); /* Force hardware acceleration */
+    contain: strict; /* Prevent content overflow */
+}
+
+/* Equalize hover effects */
+#breezy.artist-card:hover {
+    transform: scale(1.05) !important;
+}
